@@ -18,6 +18,10 @@ import java.util.ArrayList;
  */
 public class ScheduleCheck extends Query {
     
+    private String building; 
+    private String time; 
+    private String days;
+    
     public ScheduleCheck () {
     
     }
@@ -26,6 +30,35 @@ public class ScheduleCheck extends Query {
     //class and as need to see if a class is
     // in the database
     public int checkClass(String building, String time, String days){
+        String sql = "SELECT class_id FROM classes " +
+                "WHERE building=? AND time=? AND days=?";
+        
+        //connect to database (inherited from Query)
+        Connection conn = connect();
+        try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           
+            // set the values in the sql command
+            pstmt.setString(1, building);
+            pstmt.setString(2, time);
+            pstmt.setString(3, days);
+            ResultSet rs  = pstmt.executeQuery();
+            
+            int classID = rs.getInt(1);
+            
+            return classID;
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return -1;
+    }
+    
+    public int checkClass(Course course){
+        building = course.getCourseLocation();
+        time = course.getCourseTime();
+        days = course.getCourseDays();
+        //int classID = course.getCourseID();
+        
         String sql = "SELECT class_id FROM classes " +
                 "WHERE building=? AND time=? AND days=?";
         
