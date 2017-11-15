@@ -19,6 +19,7 @@ public class ScheduleCreation extends Push {
     private String location; 
     private String time; 
     private String days;
+    private ScheduleCheck check = new ScheduleCheck();
     
     public void addCourse (Course course){
         courseName = course.getCourseName();
@@ -26,18 +27,25 @@ public class ScheduleCreation extends Push {
         time = course.getCourseTime();
         days = course.getCourseDays();
         
-         String sql = "INSERT INTO classes (building, time, days) VALUES (?,?,?)";
+        int classcreated;
+        classcreated = check.checkClass(location, time, days);
+        
+        //only create if class is not in the database already
+        if(classcreated == -1){
+        
+            String sql = "INSERT INTO classes (building, time, days) VALUES (?,?,?)";
 
-        try (Connection conn = this.connect();
-            PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            
-            pstmt.setString(1, location);
-            pstmt.setString(2, time);
-            pstmt.setString(3, days);
-            
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            try (Connection conn = this.connect();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+                pstmt.setString(1, location);
+                pstmt.setString(2, time);
+                pstmt.setString(3, days);
+
+                pstmt.executeUpdate();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
     //testing purposes -> seeing if it works!
