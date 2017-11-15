@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controller;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,8 +26,11 @@ public abstract class Push implements DatabaseOperations {
     public Connection connect () {
         Connection conn = null;
         try {
-            // db parameters
-            String url = "jdbc:sqlite:C:/CS 321/sqlite/shadeDB.db";
+            File file = new File("shadeDB.db"); // Set file needed to access
+            String url = file.getAbsolutePath(); // Get computer's path to file
+            url = ("jdbc:sqlite:" + url); // Add necessary prefix to path string
+            System.out.print(url); // Print url for testing purposes
+            
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
