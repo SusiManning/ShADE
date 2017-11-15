@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,6 +19,7 @@ import java.sql.SQLException;
 public class ScheduleCheck extends Query {
     
     public ScheduleCheck () {
+    
     }
     
     //to be used by the ScheduleCreation
@@ -47,8 +49,13 @@ public class ScheduleCheck extends Query {
         return -1;
     }
     
-    public Profile checkMatch(int profileID, int classID) {
+    public ArrayList<Profile> checkMatch(int profileID, int classID) {
         Profile profile = null;
+        
+        ArrayList <Integer> profileIDs = new ArrayList();
+        ArrayList <Profile> profiles = new ArrayList();
+        
+        int student_match; 
         
         String sql = "SELECT student_id, class_id FROM student_classes " +
                 "WHERE class_id = ?";
@@ -58,24 +65,38 @@ public class ScheduleCheck extends Query {
         try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
            
             // set the values in the sql command
-            //pstmt.setString(1, building);
-            //pstmt.setString(2, time);
-            //pstmt.setString(3, days);
-            //ResultSet rs  = pstmt.executeQuery();
+            pstmt.setInt(1, profileID);
+            pstmt.setInt(2, classID);;
             
-            //int classID = rs.getInt(1);
+            //get results
+            ResultSet rs  = pstmt.executeQuery();
             
-            //return classID;
+            //loop to get profileIDs
+            while (rs.next()){
+                student_match = rs.getInt(1);
+                
+                //if the current studentID does not equal 
+                //the profileID passed
+                if (student_match != profileID)
+                    //add the matching student
+                    profileIDs.add(rs.getInt(1));
+            }
+            
+            for (Integer profileid : profileIDs ){
+                profile = getProfileFromClass(profileid); //could use Profile Check class
+                profiles.add(profile);
+            }
             
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         
-        return profile;
+        return profiles;
     }
     
     private Profile getProfileFromClass(int profileID){
         Profile profile = null;
+        
         return profile;
     }
     
