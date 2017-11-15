@@ -26,6 +26,10 @@ public class Profile {
      * @param V
      * @param D 
      */
+    Profile(){
+    
+    }
+    
     Profile(Schedule S, String N, String E, String P, Vehicle V, Boolean D){
         mySchedule = S;
         name = N;
