@@ -51,7 +51,7 @@ public class LoginCheck extends Query {
             
             // loop through the result set
             while (rs.next()){
-                profileid = rs.getInt(3); 
+                profileid = rs.getInt(1); 
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
