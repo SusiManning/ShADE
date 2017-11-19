@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import DataModel.Profile;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,7 +29,7 @@ public class ProfileCheck extends Query {
      * results to find corresponding id.
      * @param profile_id
      */
-    public void check(int profile_id){
+    public Profile check(int profile_id){
         String sql = "SELECT first_name, last_name, email, phone FROM profiles " +
                 "WHERE student_id=?";
         
@@ -37,6 +38,8 @@ public class ProfileCheck extends Query {
         String last_name = "Steve";
         String email = "Steve@steve.com";
         String phone = "1800Steve";
+        
+        Profile profile = null;
         
         //connect to database (inherited from Query)
         Connection conn = connect();
@@ -62,9 +65,16 @@ public class ProfileCheck extends Query {
             System.out.println(email);
             System.out.println(phone);
             
+            profile = new Profile ();
+            profile.setFirstName(first_name);
+            profile.setLastName(last_name);
+            profile.setEmail(email);
+            profile.setPN(phone);
+            
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+        return profile;
     }
     public static void main(String[] args) {
         ProfileCheck app = new ProfileCheck();

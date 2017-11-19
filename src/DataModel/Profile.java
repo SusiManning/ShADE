@@ -1,6 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To set this license header, choose License Headers in Project Properties.
+ * To set this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package DataModel;
@@ -12,9 +12,10 @@ package DataModel;
  */
 public class Profile {
     private Schedule mySchedule;
-    private String name, email, phonenum;
+    private String firstname, lastname, email, phonenum;
     private Vehicle vehicle;
     private Boolean isDriver;
+    private int profile_id;
     
     /**
      * Constructor for Profile class. Sets user defined schedule, name, email, 
@@ -26,24 +27,16 @@ public class Profile {
      * @param V
      * @param D 
      */
-    Profile(){
-    
-    }
-    
-    Profile(Schedule S, String N, String E, String P, Vehicle V, Boolean D){
-        mySchedule = S;
-        name = N;
-        email = E;
-        phonenum = P;
-        vehicle = V;
-        isDriver = D;
+
+    public Profile() {
+        
     }
     
     /**
      * Method to return schedule from a given profile.
      * @return 
      */
-    Schedule getSchedule(){
+    public Schedule getSchedule(){
         return mySchedule;
     }
     
@@ -51,15 +44,19 @@ public class Profile {
      * Method to return name from a given profile.
      * @return 
      */
-    String getName(){
-        return name;
+    public String getFirstName(){
+        return firstname;
+    }
+    
+    public String getLastName(){
+        return firstname;
     }
     
     /**
      * Method to return email from a given profile.
      * @return 
      */
-    String getEmail(){
+    public String getEmail(){
         return email;
     }
     
@@ -67,7 +64,7 @@ public class Profile {
      * Method to return phone number from a given profile.
      * @return 
      */
-    String getPhoneNumber(){
+    public String getPhoneNumber(){
         return phonenum;
     }
     
@@ -75,7 +72,7 @@ public class Profile {
      * Method to return vehicle from a given profile.
      * @return 
      */
-    Vehicle getVehicle(){
+    public Vehicle getVehicle(){
         return vehicle;
     }
     
@@ -84,61 +81,73 @@ public class Profile {
      * to be a driver or rider.
      * @return 
      */
-    Boolean getDriver(){
+    public Boolean getDriver(){
         return isDriver;
     }
     
+    public int getID(){
+        return profile_id;
+    }
+    
     /**
-     * Method to change schedule stored in a given profile.
+     * Method to set schedule stored in a given profile.
      * Pass in a schedule object.
      * @param newSchedule 
      */
-    void changeSchedule(Schedule newSchedule){
+    public void setSchedule(Schedule newSchedule){
         mySchedule = newSchedule;
     }
     
     /**
-     * Method to change name stored in a given profile.
+     * Method to set name stored in a given profile.
      * Pass in a string.
      * @param newName 
      */
-    void changeName(String newName){
-        name = newName;
+    public void setFirstName(String newName){
+        firstname = newName;
+    }
+    
+    public void setLastName(String newName){
+        lastname = newName;
     }
     
     /**
-     * Method to change email in a given profile.
+     * Method to set email in a given profile.
      * Pass in a string.
      * @param newEmail 
      */
-    void changeEmail(String newEmail){
+    public void setEmail(String newEmail){
         email = newEmail;
     }
     
     /**
-     * Method to change phone number in a given profile.
+     * Method to set phone number in a given profile.
      * Pass in a string.
      * @param newPhoneNum 
      */
-    void changePN(String newPhoneNum){
+    public void setPN(String newPhoneNum){
         phonenum = newPhoneNum;
     }
     
     /**
-     * Method to change vehicle in a given profile. 
+     * Method to set vehicle in a given profile. 
      * Pass in a vehicle object.
      * @param newVehicle 
      */
-    void changeVehicle(Vehicle newVehicle){
+    public void setVehicle(Vehicle newVehicle){
         vehicle = newVehicle;
     }
     
     /**
-     * Method to change driver status in a given profile.
+     * Method to set driver status in a given profile.
      * Pass in a boolean.
      * @param newDriver 
      */
-    void changeDriver(Boolean newDriver){
+    public void setDriver(Boolean newDriver){
         isDriver = newDriver;
+    }
+    
+    public void setID(int id){
+        profile_id = id;
     }
 }
