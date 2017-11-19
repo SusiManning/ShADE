@@ -1,4 +1,4 @@
-/*
+/**
  * Program Name: Login
  * Programmers: Michael David
  * Date Last Edited: 11/19/2017
@@ -8,17 +8,17 @@ package DataModel;
 
 public class Login {
     
-    /*
+    /**
      * The username and password fields.
      */
     private String userName, password;
     
-    /*
+    /**
      * Default constructor for Login class
      */
     public Login(){}    
    
-    /*
+    /**
      * Method to set username.
      * @param user 
      */
@@ -26,7 +26,7 @@ public class Login {
         userName = user;
     }
     
-    /*
+    /**
      * Method to set password.
      * @param pass 
      */
@@ -34,7 +34,7 @@ public class Login {
         password = pass; 
     }
     
-    /*
+    /**
      * Method to return username.
      * @return 
      */
@@ -42,7 +42,7 @@ public class Login {
         return userName;
     }
     
-    /*
+    /**
      * Method to return password.
      * @return 
      */
