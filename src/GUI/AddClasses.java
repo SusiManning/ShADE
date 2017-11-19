@@ -42,6 +42,7 @@ public class AddClasses extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 255, 0));
 
@@ -49,12 +50,12 @@ public class AddClasses extends javax.swing.JPanel {
 
         startHour.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" }));
         startHour.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
-            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
-                startHourPopupMenuWillBecomeVisible(evt);
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
             }
             public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
             }
-            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+                startHourPopupMenuWillBecomeVisible(evt);
             }
         });
 
@@ -86,6 +87,13 @@ public class AddClasses extends javax.swing.JPanel {
         jLabel12.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
         jLabel12.setText("Add Classes");
 
+        jButton1.setText("View Map");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -106,6 +114,8 @@ public class AddClasses extends javax.swing.JPanel {
                                         .addComponent(building, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(33, 33, 33))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(addClassButton)
                                         .addGap(78, 78, 78)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,7 +162,8 @@ public class AddClasses extends javax.swing.JPanel {
                     .addComponent(endMinute, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addClassButton)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -165,6 +176,13 @@ public class AddClasses extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_startHourPopupMenuWillBecomeVisible
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new Map().setVisible(true); //Displays Map.java on the screen so the user can see the map
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addClassButton;
@@ -172,6 +190,7 @@ public class AddClasses extends javax.swing.JPanel {
     private javax.swing.JLabel buildingLabel;
     private javax.swing.JComboBox<String> endHour;
     private javax.swing.JComboBox<String> endMinute;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
