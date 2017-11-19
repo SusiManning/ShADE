@@ -1,4 +1,4 @@
-/*
+/**
  * Program Name: Schedule
  * Programmers: Michael David
  * Date Last Edited: 11/19/2017
@@ -11,12 +11,12 @@ public class Schedule extends Course{
     
     public ArrayList<Course> sched = new ArrayList<>();      //Array List of Courses.
     
-    /*
+    /**
      * Default constructor for schedule class.
      */
     public Schedule() {}
     
-    /*
+    /**
      * Method to add a course to schedule.
      * @param x 
      */
@@ -25,7 +25,7 @@ public class Schedule extends Course{
         sched.add(x);
     }
     
-    /*
+    /**
      * Method to return current schedule.
      * @return 
      */
@@ -34,7 +34,7 @@ public class Schedule extends Course{
         return sched;
     }
     
-    /*
+    /**
      * Method to return specific course from current schedule.
      * @param index
      * @return 
