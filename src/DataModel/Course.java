@@ -1,72 +1,62 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Course
+ * Programmers: Michael David
+ * Date Last Edited: 11/19/2017
+ * Description: Class to set and manipulate information about a course.
  */
+
 package DataModel;
 
-/**
- * Class to set and manipulate information about a course.
- * @author Michael
- */
 public class Course {
     private int courseID;
-    private String courseName; //I dont know if this is needed
-    private String location; 
-    private String time; 
-    private String days;
+    private String location, time, days;
     
-    /**
+    /*
      * Constructor for Course class. Allows users to pass in id, class name, 
      * class location, class start time, and class days.
      * @param id
-     * @param name
      * @param place
      * @param t
      * @param d 
      */
-    public Course(int id, String name, String place, String t, String d)
+    public Course(int id, String place, String t, String d)
     {
         courseID = id;
-        courseName = name;
         location = place; 
         time = t;
         days = d;
     }
     
-    /**
-     * Constructor for Course Class. Sets values to defaults so that 
+    /*
+     * Default constructor for Course Class. Sets values to defaults so that 
      * they can be changed individually.
      */
     public Course() 
     {
         courseID = 0;
-        courseName = "Default";
         location = "Default";
         time = "Default";
         days = "Default";
     } 
     
-    /**
+    /*
      * Method to set course information to created course object. 
      * User passes in id, class name, class location, 
      * class start time, and class meeting days.
      * @param id
-     * @param name
      * @param place
      * @param t
      * @param d 
      */
-    public void setCourse(int id, String name, String place, String t, String d)
+    public void setCourse(int id, String place, String t, String d)
     {
         courseID = id;
-        courseName = name;
         location = place; 
         time = t;
         days = d;
     }
     
-    /**
+    /*
      * Method to set an existing course object's id.
      * Pass in an integer.
      * @param id 
@@ -76,17 +66,7 @@ public class Course {
         courseID = id;
     }
     
-    /**
-     * Method to set existing course object's name.
-     * Pass in a string.
-     * @param name 
-     */
-    public void setCourseName(String name)
-    {
-        courseName = name; 
-    }
-    
-    /**
+    /*
      * Method to set existing course object's location.
      * Pass in a string.
      * @param place 
@@ -96,7 +76,7 @@ public class Course {
         location = place;
     }
     
-    /**
+    /*
      * Method to set existing course object's start time.
      * Pass in a string.
      * @param t 
@@ -106,7 +86,7 @@ public class Course {
         time = t; 
     }
     
-    /**
+    /*
      * Method to set existing course object's meeting days.
      * Pass in a string.
      * @param d 
@@ -116,7 +96,7 @@ public class Course {
         days = d;
     }
     
-    /**
+    /*
      * Method to return existing course object's id.
      * @return 
      */
@@ -125,16 +105,7 @@ public class Course {
         return courseID;
     }
     
-    /**
-     * Method to return existing course object's name.
-     * @return 
-     */
-    public String getCourseName()
-    {
-        return courseName; 
-    }
-    
-    /**
+    /*
      * Method to return existing course object's location.
      * @return 
      */
@@ -143,7 +114,7 @@ public class Course {
         return location;
     }
     
-    /**
+    /*
      * Method to return existing course object's start time.
      * @return 
      */
@@ -152,7 +123,7 @@ public class Course {
         return time; 
     }
     
-    /**
+    /*
      * Method to get existing course object's meeting days.
      * @return 
      */
@@ -160,6 +131,4 @@ public class Course {
     {
         return days;
     }
-    
-    
 }
