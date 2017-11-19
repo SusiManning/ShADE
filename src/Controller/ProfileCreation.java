@@ -18,7 +18,7 @@ public class ProfileCreation extends Push {
     /**
      * Constructor for login creation class.
      */
-    ProfileCreation (){
+    public ProfileCreation (){
     
     }
     
