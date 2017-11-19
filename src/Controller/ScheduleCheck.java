@@ -129,8 +129,7 @@ public class ScheduleCheck extends Query {
     
     private Profile getProfileFromClass(int profileID){
         Profile profile = null;
-        ProfileCheck check = new ProfileCheck();
-        profile = check.check(profileID);
+        
         return profile;
     }
     

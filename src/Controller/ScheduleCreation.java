@@ -48,22 +48,6 @@ public class ScheduleCreation extends Push {
             }
         }
     }
-    
-    public void addStudentCourse (int profile_id, int class_id){
-        String sql = "INSERT INTO student_classes (student_id, class_id) VALUES (?,?,?)";
-
-            try (Connection conn = this.connect();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-                pstmt.setInt(1, profile_id);
-                pstmt.setInt(2, class_id);
-
-                pstmt.executeUpdate();
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-    
-    }
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
     public static void main(String[] args) {

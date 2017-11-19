@@ -9,8 +9,6 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 /**
  * Class to hold methods necessary to retrieve information from the database.
