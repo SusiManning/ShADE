@@ -1,4 +1,4 @@
-/*
+/**
  * Program Name: Profile
  * Programmers: Aaron Wieter
  * Date Last Edited: 11/19/2017
@@ -12,12 +12,12 @@ public class Profile {
     private Vehicle vehicle;                                    //Holds the user's vehicle.
     private int profile_id;                                     //Holds the profile id of a user's profile.
     
-    /*
+    /**
      * Default constructor for Profile class.
      */
     public Profile() {}
     
-    /*
+    /**
      * Method to return schedule from a given profile.
      * @return 
      */
@@ -25,7 +25,7 @@ public class Profile {
         return mySchedule;
     }
     
-    /*
+    /**
      * Method to return firstname from a given profile.
      * @return 
      */
@@ -33,7 +33,7 @@ public class Profile {
         return firstname;
     }
     
-    /*
+    /**
      * Method to return lastname from a given profile.
      * @return 
      */
@@ -41,7 +41,7 @@ public class Profile {
         return lastname;
     }
     
-    /*
+    /**
      * Method to return email from a given profile.
      * @return 
      */
@@ -49,7 +49,7 @@ public class Profile {
         return email;
     }
     
-    /*
+    /**
      * Method to return phone number from a given profile.
      * @return 
      */
@@ -57,7 +57,7 @@ public class Profile {
         return phonenum;
     }
     
-    /*
+    /**
      * Method to return vehicle from a given profile.
      * @return 
      */
@@ -65,14 +65,14 @@ public class Profile {
         return vehicle;
     }
     
-    /*
+    /**
      *Method to return profile_ide from a given profile.
      */
     public int getID(){
         return profile_id;
     }
     
-    /*
+    /**
      * Method to set schedule stored in a given profile.
      * Pass in a schedule object.
      * @param newSchedule 
@@ -81,7 +81,7 @@ public class Profile {
         mySchedule = newSchedule;
     }
     
-    /*
+    /**
      * Method to set firstname stored in a given profile.
      * Pass in a string.
      * @param newName 
@@ -90,7 +90,7 @@ public class Profile {
         firstname = newName;
     }
     
-    /*
+    /**
      * Method to set lastname stored in a given profile.
      * Pass in a string.
      * @param newName 
@@ -99,7 +99,7 @@ public class Profile {
         lastname = newName;
     }
     
-    /*
+    /**
      * Method to set email in a given profile.
      * Pass in a string.
      * @param newEmail 
@@ -108,7 +108,7 @@ public class Profile {
         email = newEmail;
     }
     
-    /*
+    /**
      * Method to set phone number in a given profile.
      * Pass in a string.
      * @param newPhoneNum 
@@ -117,7 +117,7 @@ public class Profile {
         phonenum = newPhoneNum;
     }
     
-    /*
+    /**
      * Method to set vehicle in a given profile. 
      * Pass in a vehicle object.
      * @param newVehicle 
@@ -126,7 +126,7 @@ public class Profile {
         vehicle = newVehicle;
     }
     
-    /*
+    /**
      *Method to set profile_id in a given profile.
      *Pass in an int.
      *@param id
