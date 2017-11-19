@@ -1,26 +1,22 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Schedule
+ * Programmers: Michael David
+ * Date Last Edited: 11/19/2017
+ * Description: Class to manipulate schedule objects
  */
 package DataModel;
-import java.util.*;
-/**
- * Class to manipulate schedule objects
- * @author Michael
- */
+import java.util.ArrayList;
+
 public class Schedule extends Course{
-    //Array List of Course
-    public ArrayList<Course> sched = new ArrayList<>();
     
-    /**
-     * Constructor for schedule class.
+    public ArrayList<Course> sched = new ArrayList<>();      //Array List of Courses.
+    
+    /*
+     * Default constructor for schedule class.
      */
-    public Schedule()
-    {  
-    }
+    public Schedule() {}
     
-    /**
+    /*
      * Method to add a course to schedule.
      * @param x 
      */
@@ -28,7 +24,8 @@ public class Schedule extends Course{
     {
         sched.add(x);
     }
-    /**
+    
+    /*
      * Method to return current schedule.
      * @return 
      */
@@ -37,7 +34,7 @@ public class Schedule extends Course{
         return sched;
     }
     
-    /**
+    /*
      * Method to return specific course from current schedule.
      * @param index
      * @return 
@@ -46,5 +43,4 @@ public class Schedule extends Course{
     {
         return sched.get(index);
     }
-    
 }
