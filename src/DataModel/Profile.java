@@ -49,7 +49,7 @@ public class Profile {
     }
     
     public String getLastName(){
-        return firstname;
+        return lastname;
     }
     
     /**
