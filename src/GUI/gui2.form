@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="parentPanel" alignment="1" max="32767" attributes="0"/>
+          <Component id="parentPanel" alignment="1" pref="709" max="32767" attributes="0"/>
           <Component id="buttonPanel" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
@@ -45,14 +45,14 @@
         <Component class="GUI.Login" name="login1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card4"/>
+              <CardConstraints cardName="card1"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="GUI.Ride" name="ride1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card4"/>
+              <CardConstraints cardName="card2"/>
             </Constraint>
           </Constraints>
         </Component>
