@@ -1,18 +1,18 @@
- /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package DataModel;
-  
-
 /**
  * Programmers: Aaron Wieter
  * Date Last Edited: 9/28/2017
  * Program Description: Class to create and manipulate vehicle objects.
  */
+package DataModel;
+
 public class Vehicle {
-    private String make, model, color;
+ 
+    private String make, model, color;      //Holds information about a car's make, model, and color.
+    
+    /**
+     * Default constructor for vehcile.
+     */
+    Vehicle() {}
     
     /**
      * Constructor for create a vehicle with given parameters.
