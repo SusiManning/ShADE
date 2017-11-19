@@ -13,32 +13,30 @@ import java.sql.SQLException;
  * Class to communicate between GUI and database to create a login account. 
  * @author crs0050
  */
-public class ProfileCreation extends Push {
+public class LoginCreation extends Push {
     
     /**
      * Constructor for login creation class.
      */
-    ProfileCreation (){
+    public LoginCreation (){
     
     }
     
     /**
-     * Method to create a login account. Using sqlite syntx, name, email,
-     * and phonenum are passed in and set into the database table.
-     * @param  first_name
-     * @param  last_name
-     * @param  email
-     * @param  phone
+     * Method to create a login account. Using sqlite syntx, username, password,
+     * and profile id are passed in and set into the database table.
+     * @param usrname
+     * @param pass
+     * @param profileid 
      */
-    public void create(String first_name, String last_name, String email, String phone){
-        String sql = "INSERT INTO profiles (first_name, last_name, email, phone) VALUES (?,?,?,?)";
+    public void create(String usrname, String pass, int profileid){
+        String sql = "INSERT INTO login(username, password, profile_id) VALUES(?,?,?)";
 
         try (Connection conn = this.connect();
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, first_name);
-            pstmt.setString(2, last_name);
-            pstmt.setString(3, email);
-            pstmt.setString(4, phone);
+            pstmt.setString(1, usrname);
+            pstmt.setString(2, pass);
+            pstmt.setInt(3, profileid);
             
             pstmt.executeUpdate();
         } catch (SQLException e) {
@@ -49,9 +47,8 @@ public class ProfileCreation extends Push {
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
     public static void main(String[] args) {
-        ProfileCreation app = new ProfileCreation();
+        LoginCreation app = new LoginCreation();
         
-        app.create("Bob", "Bob", "Bob@bob.com", "1800Bob");
-        System.out.println("Profile created.");
+        app.create("test", "test", 1);
     }
 }
