@@ -1,7 +1,7 @@
 /**
  * Program Name: Vehcile
  * Programmers: Aaron Wieter
- * Date Last Edited: 9/28/2017
+ * Date Last Edited: 11/19/2017
  * Program Description: Class to create and manipulate vehicle objects.
  */
 package DataModel;
