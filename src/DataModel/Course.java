@@ -1,4 +1,4 @@
-/*
+/**
  * Program Name: Course
  * Programmers: Michael David
  * Date Last Edited: 11/19/2017
@@ -11,12 +11,12 @@ public class Course {
     private int courseID;
     private String location, time, days;
     
-    /*
+    /**
      * Default constructor for Course Class.
      */
     public Course() {} 
     
-    /*
+    /**
      * Constructor for Course class. Allows users to pass in id, class name, 
      * class location, class start time, and class days.
      * @param id
@@ -32,7 +32,7 @@ public class Course {
         days = d;
     }
        
-    /*
+    /**
      * Method to set course information to created course object. 
      * User passes in id, class name, class location, 
      * class start time, and class meeting days.
@@ -49,7 +49,7 @@ public class Course {
         days = d;
     }
     
-    /*
+    /**
      * Method to set an existing course object's id.
      * Pass in an integer.
      * @param id 
@@ -59,7 +59,7 @@ public class Course {
         courseID = id;
     }
     
-    /*
+    /**
      * Method to set existing course object's location.
      * Pass in a string.
      * @param place 
@@ -69,7 +69,7 @@ public class Course {
         location = place;
     }
     
-    /*
+    /**
      * Method to set existing course object's start time.
      * Pass in a string.
      * @param t 
@@ -79,7 +79,7 @@ public class Course {
         time = t; 
     }
     
-    /*
+    /**
      * Method to set existing course object's meeting days.
      * Pass in a string.
      * @param d 
@@ -89,7 +89,7 @@ public class Course {
         days = d;
     }
     
-    /*
+    /**
      * Method to return existing course object's id.
      * @return 
      */
@@ -98,7 +98,7 @@ public class Course {
         return courseID;
     }
     
-    /*
+    /**
      * Method to return existing course object's location.
      * @return 
      */
@@ -107,7 +107,7 @@ public class Course {
         return location;
     }
     
-    /*
+    /**
      * Method to return existing course object's start time.
      * @return 
      */
@@ -116,7 +116,7 @@ public class Course {
         return time; 
     }
     
-    /*
+    /**
      * Method to get existing course object's meeting days.
      * @return 
      */
