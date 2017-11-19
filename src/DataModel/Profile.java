@@ -6,10 +6,8 @@
  */
 package DataModel;
 
-public class Profile {
-    private Schedule mySchedule;                                //Holds the user's schedule.
-    private String firstname, lastname, email, phonenum;        //Holds the user's first name, last name, email, and phone number respectively.
-    private Vehicle vehicle;                                    //Holds the user's vehicle.
+public class Profile {                               //Holds the user's schedule.
+    private String firstname, lastname, email, phonenum;        //Holds the user's first name, last name, email, and phone number respectively.                                  //Holds the user's vehicle.
     private int profile_id;                                     //Holds the profile id of a user's profile.
     
     /**
@@ -17,14 +15,7 @@ public class Profile {
      */
     public Profile() {}
     
-    /**
-     * Method to return schedule from a given profile.
-     * @return 
-     */
-    public Schedule getSchedule(){
-        return mySchedule;
-    }
-    
+
     /**
      * Method to return firstname from a given profile.
      * @return 
@@ -61,9 +52,6 @@ public class Profile {
      * Method to return vehicle from a given profile.
      * @return 
      */
-    public Vehicle getVehicle(){
-        return vehicle;
-    }
     
     /**
      *Method to return profile_ide from a given profile.
@@ -77,9 +65,7 @@ public class Profile {
      * Pass in a schedule object.
      * @param newSchedule 
      */
-    public void setSchedule(Schedule newSchedule){
-        mySchedule = newSchedule;
-    }
+
     
     /**
      * Method to set firstname stored in a given profile.
@@ -116,16 +102,7 @@ public class Profile {
     public void setPN(String newPhoneNum){
         phonenum = newPhoneNum;
     }
-    
-    /**
-     * Method to set vehicle in a given profile. 
-     * Pass in a vehicle object.
-     * @param newVehicle 
-     */
-    public void setVehicle(Vehicle newVehicle){
-        vehicle = newVehicle;
-    }
-    
+  
     /**
      *Method to set profile_id in a given profile.
      *Pass in an int.

@@ -22,7 +22,6 @@ public class ScheduleCreation extends Push {
     private ScheduleCheck check = new ScheduleCheck();
     
     public void addCourse (Course course){
-        courseName = course.getCourseName();
         location = course.getCourseLocation();
         time = course.getCourseTime();
         days = course.getCourseDays();
