@@ -1,29 +1,25 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Login
+ * Programmers: Michael David
+ * Date Last Edited: 11/19/2017
+ * Description: Class to control user login process.
  */
 package DataModel;
 import java.util.Scanner; 
 
-/**
- * Class to control user login process.
- * @author Michael
- */
 public class Login {
     
-    /**
-     * Constructor for Login class
+    /*
+     * The username and password fields.
      */
-    public Login(){
-        
-    }
+    private String userName, password;
     
-    // username, password fields
-    private String userName;
-    private String password;
+    /*
+     * Default constructor for Login class
+     */
+    public Login(){}    
    
-    /**
+    /*
      * Method to set username.
      * @param user 
      */
@@ -31,7 +27,7 @@ public class Login {
         userName = user;
     }
     
-    /**
+    /*
      * Method to set password.
      * @param pass 
      */
@@ -39,7 +35,7 @@ public class Login {
         password = pass; 
     }
     
-    /**
+    /*
      * Method to return username.
      * @return 
      */
@@ -47,21 +43,11 @@ public class Login {
         return userName;
     }
     
-    /**
+    /*
      * Method to return password.
      * @return 
      */
     String getPass(){
         return password; 
-    }
-    
-   
-    
-
-   
-  
-          
-    
-    
-    
+    } 
 }
