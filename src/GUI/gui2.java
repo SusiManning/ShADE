@@ -30,8 +30,9 @@ public class gui2 extends javax.swing.JFrame {
 
         parentPanel = new javax.swing.JPanel();
         login1 = new GUI.Login();
-        ride1 = new GUI.Ride();
         info1 = new GUI.Info();
+        addClasses1 = new GUI.AddClasses();
+        ride1 = new GUI.Ride();
         buttonPanel = new javax.swing.JPanel();
         loginButtons = new javax.swing.JSplitPane();
         loginButtons2 = new javax.swing.JSplitPane();
@@ -50,9 +51,10 @@ public class gui2 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         parentPanel.setLayout(new java.awt.CardLayout());
-        parentPanel.add(login1, "card1");
+        parentPanel.add(login1, "card6");
+        parentPanel.add(info1, "card6");
+        parentPanel.add(addClasses1, "card6");
         parentPanel.add(ride1, "card2");
-        parentPanel.add(info1, "card3");
 
         buttonPanel.setBackground(new java.awt.Color(0, 0, 0));
         buttonPanel.setLayout(new java.awt.CardLayout());
@@ -67,7 +69,12 @@ public class gui2 extends javax.swing.JFrame {
         });
         loginButtons2.setLeftComponent(letsRideButton);
 
-        createAccount.setText("Go");
+        createAccount.setText("Go Make My Account");
+        createAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createAccountActionPerformed(evt);
+            }
+        });
         loginButtons2.setRightComponent(createAccount);
 
         loginButtons.setRightComponent(loginButtons2);
@@ -109,7 +116,7 @@ public class gui2 extends javax.swing.JFrame {
         });
         accountButtons2.setLeftComponent(cancelButton);
 
-        saveButton.setText("Save");
+        saveButton.setText("Find A Ride");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformed(evt);
@@ -128,13 +135,13 @@ public class gui2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(parentPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 709, Short.MAX_VALUE)
+            .addComponent(parentPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 709, Short.MAX_VALUE)
             .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(parentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 376, Short.MAX_VALUE)
+                .addComponent(parentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 399, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
                 .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -202,6 +209,18 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.revalidate(); 
     }//GEN-LAST:event_editAccountActionPerformed
 
+    private void createAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(info1);
+        parentPanel.repaint();
+        parentPanel.revalidate(); 
+        
+        buttonPanel.removeAll();
+        buttonPanel.add(accountButtons);
+        parentPanel.repaint();
+        parentPanel.revalidate();
+    }//GEN-LAST:event_createAccountActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -240,6 +259,7 @@ public class gui2 extends javax.swing.JFrame {
     private javax.swing.JSplitPane accountButtons;
     private javax.swing.JSplitPane accountButtons2;
     private javax.swing.JButton addClassButton;
+    private GUI.AddClasses addClasses1;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton cancelButton;
     private javax.swing.JButton createAccount;
