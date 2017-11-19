@@ -5,7 +5,6 @@
  * Description: Class to control user login process.
  */
 package DataModel;
-import java.util.Scanner; 
 
 public class Login {
     
