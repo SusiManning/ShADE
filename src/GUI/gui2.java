@@ -127,6 +127,11 @@ public class gui2 extends javax.swing.JFrame {
         accountButtons.setRightComponent(accountButtons2);
 
         addClassButton.setText("Add Class");
+        addClassButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addClassButtonActionPerformed(evt);
+            }
+        });
         accountButtons.setLeftComponent(addClassButton);
 
         buttonPanel.add(accountButtons, "card4");
@@ -220,6 +225,18 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.repaint();
         parentPanel.revalidate();
     }//GEN-LAST:event_createAccountActionPerformed
+
+    private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(addClasses1);
+        parentPanel.repaint();
+        parentPanel.revalidate(); 
+        
+        buttonPanel.removeAll();
+        buttonPanel.add(accountButtons);
+        parentPanel.repaint();
+        parentPanel.revalidate();
+    }//GEN-LAST:event_addClassButtonActionPerformed
 
     /**
      * @param args the command line arguments
