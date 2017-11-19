@@ -12,6 +12,11 @@ public class Course {
     private String location, time, days;
     
     /*
+     * Default constructor for Course Class.
+     */
+    public Course() {} 
+    
+    /*
      * Constructor for Course class. Allows users to pass in id, class name, 
      * class location, class start time, and class days.
      * @param id
@@ -26,19 +31,7 @@ public class Course {
         time = t;
         days = d;
     }
-    
-    /*
-     * Default constructor for Course Class. Sets values to defaults so that 
-     * they can be changed individually.
-     */
-    public Course() 
-    {
-        courseID = 0;
-        location = "Default";
-        time = "Default";
-        days = "Default";
-    } 
-    
+       
     /*
      * Method to set course information to created course object. 
      * User passes in id, class name, class location, 
