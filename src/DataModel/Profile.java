@@ -1,38 +1,23 @@
 /*
- * To set this license header, choose License Headers in Project Properties.
- * To set this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Profile
+ * Programmers: Aaron Wieter
+ * Date Last Edited: 11/19/2017
+ * Program Description: Class that holds and returns all information related to a user's profile.
  */
 package DataModel;
 
-/**
- * Programmers: Aaron Wieter
- * Date Last Edited: 9/28/2017
- * Program Description: 
- */
 public class Profile {
-    private Schedule mySchedule;
-    private String firstname, lastname, email, phonenum;
-    private Vehicle vehicle;
-    private Boolean isDriver;
-    private int profile_id;
+    private Schedule mySchedule;                                //Holds the user's schedule.
+    private String firstname, lastname, email, phonenum;        //Holds the user's first name, last name, email, and phone number respectively.
+    private Vehicle vehicle;                                    //Holds the user's vehicle.
+    private int profile_id;                                     //Holds the profile id of a user's profile.
     
-    /**
-     * Constructor for Profile class. Sets user defined schedule, name, email, 
-     * phone number, vehicle, and preference to be a  driver or rider.
-     * @param S
-     * @param N
-     * @param E
-     * @param P
-     * @param V
-     * @param D 
+    /*
+     * Default constructor for Profile class.
      */
-
-    public Profile() {
-        
-    }
+    public Profile() {}
     
-    /**
+    /*
      * Method to return schedule from a given profile.
      * @return 
      */
@@ -40,19 +25,23 @@ public class Profile {
         return mySchedule;
     }
     
-    /**
-     * Method to return name from a given profile.
+    /*
+     * Method to return firstname from a given profile.
      * @return 
      */
     public String getFirstName(){
         return firstname;
     }
     
+    /*
+     * Method to return lastname from a given profile.
+     * @return 
+     */
     public String getLastName(){
         return lastname;
     }
     
-    /**
+    /*
      * Method to return email from a given profile.
      * @return 
      */
@@ -60,7 +49,7 @@ public class Profile {
         return email;
     }
     
-    /**
+    /*
      * Method to return phone number from a given profile.
      * @return 
      */
@@ -68,7 +57,7 @@ public class Profile {
         return phonenum;
     }
     
-    /**
+    /*
      * Method to return vehicle from a given profile.
      * @return 
      */
@@ -76,20 +65,14 @@ public class Profile {
         return vehicle;
     }
     
-    /**
-     * Method to return a boolean depicting if the profile is set 
-     * to be a driver or rider.
-     * @return 
+    /*
+     *Method to return profile_ide from a given profile.
      */
-    public Boolean getDriver(){
-        return isDriver;
-    }
-    
     public int getID(){
         return profile_id;
     }
     
-    /**
+    /*
      * Method to set schedule stored in a given profile.
      * Pass in a schedule object.
      * @param newSchedule 
@@ -98,8 +81,8 @@ public class Profile {
         mySchedule = newSchedule;
     }
     
-    /**
-     * Method to set name stored in a given profile.
+    /*
+     * Method to set firstname stored in a given profile.
      * Pass in a string.
      * @param newName 
      */
@@ -107,11 +90,16 @@ public class Profile {
         firstname = newName;
     }
     
+    /*
+     * Method to set lastname stored in a given profile.
+     * Pass in a string.
+     * @param newName 
+     */
     public void setLastName(String newName){
         lastname = newName;
     }
     
-    /**
+    /*
      * Method to set email in a given profile.
      * Pass in a string.
      * @param newEmail 
@@ -120,7 +108,7 @@ public class Profile {
         email = newEmail;
     }
     
-    /**
+    /*
      * Method to set phone number in a given profile.
      * Pass in a string.
      * @param newPhoneNum 
@@ -129,7 +117,7 @@ public class Profile {
         phonenum = newPhoneNum;
     }
     
-    /**
+    /*
      * Method to set vehicle in a given profile. 
      * Pass in a vehicle object.
      * @param newVehicle 
@@ -138,15 +126,11 @@ public class Profile {
         vehicle = newVehicle;
     }
     
-    /**
-     * Method to set driver status in a given profile.
-     * Pass in a boolean.
-     * @param newDriver 
+    /*
+     *Method to set profile_id in a given profile.
+     *Pass in an int.
+     *@param id
      */
-    public void setDriver(Boolean newDriver){
-        isDriver = newDriver;
-    }
-    
     public void setID(int id){
         profile_id = id;
     }
