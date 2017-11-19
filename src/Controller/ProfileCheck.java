@@ -5,6 +5,12 @@
  */
 package Controller;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 import DataModel.Profile;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,7 +26,7 @@ public class ProfileCheck extends Query {
     /**
      * Constructor for login class.
      */
-    ProfileCheck () {}
+    public ProfileCheck () {}
     
     /**
      * Check if username and password are in the database. Using sqlite syntax
@@ -76,9 +82,37 @@ public class ProfileCheck extends Query {
         }
         return profile;
     }
+    /**
+     * Method to get the profile id of a user based on their input email, which 
+     * should be unique.
+     * @param email
+     * @return 
+     */
+    public int getID(String email){
+        String sql = "SELECT student_id FROM profiles " +
+                "WHERE email=?";
+        Connection conn = connect();
+        int profile_id = -1;
+        
+        try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           
+            // set the values in the sql command
+            pstmt.setString(1, email);
+            
+            ResultSet rs  = pstmt.executeQuery();
+            // loop through the result set
+            while (rs.next()){
+                profile_id = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return profile_id;
+    }
     public static void main(String[] args) {
         ProfileCheck app = new ProfileCheck();
 
-        app.check(1);
+        int id = app.getID("jrm9999@fake.edu");
+        System.out.print(id);
     }
 }

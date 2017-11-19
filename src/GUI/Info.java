@@ -9,6 +9,7 @@ import Controller.LoginCheck;
 import Controller.LoginCreation;
 import Controller.ProfileCheck;
 import Controller.ProfileCreation;
+import DataModel.Profile;
 
 /**
  *
@@ -308,13 +309,14 @@ public class Info extends javax.swing.JPanel {
         if(fname.equals("") && lname.equals("") && password.equals("") && 
                 phone.equals("") && !email.equals(""))
         {
+            Profile prof = new Profile();
             int id = profileCheck.getID(email);
             String pass = loginCheck.checkPass(id);
-            String[] prof = profileCheck.check(id);
-            firstNameInput.setText(prof[0]);
-            lastNameInput.setText(prof[1]);
-            emailInput.setText(prof[2]);
-            phoneInput.setText(prof[3]);
+            prof = profileCheck.check(id);
+            firstNameInput.setText(prof.getFirstName());
+            lastNameInput.setText(prof.getLastName());
+            emailInput.setText(prof.getEmail());
+            phoneInput.setText(prof.getPhoneNumber());
             passwordInput.setText(pass);
         }
     }//GEN-LAST:event_editAccountActionPerformed

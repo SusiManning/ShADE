@@ -37,7 +37,6 @@ public class LoginCreation extends Push {
             pstmt.setString(1, usrname);
             pstmt.setString(2, pass);
             pstmt.setInt(3, profileid);
-            
             pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -49,6 +48,6 @@ public class LoginCreation extends Push {
     public static void main(String[] args) {
         LoginCreation app = new LoginCreation();
         
-        app.create("test", "test", 1);
+        app.create("test", "test", 40);
     }
 }

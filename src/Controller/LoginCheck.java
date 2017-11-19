@@ -24,15 +24,38 @@ public class LoginCheck extends Query {
     }
     
     /**
-     * Check if username and password are in the database. Using sqlite syntax
+     * Check what the user's password is in the database. Using sqlite syntax
      * a connection to the database is initialized, and a statement is prepared
-     * to look for the profile id corresponding to the inputs. Loops through all
-     * results to find corresponding id.
-     * @param username
-     * @param password
+     * to look for the password corresponding to the input profile id. Loops through all
+     * results to find corresponding password.
      * @return 
      */
-    public int check(String username, String password){
+    public String checkPass(int profileid){
+        String sql = "SELECT password FROM login " +
+                "WHERE profile_id=?";
+        
+        String password = "";
+        //connect to database (inherited from Query)
+        Connection conn = connect();
+        
+        try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           
+            // set the values in the sql command
+            pstmt.setInt(1, profileid);
+ 
+            ResultSet rs  = pstmt.executeQuery();
+            
+            // loop through the result set
+            while (rs.next()){
+                password = rs.getString(1); 
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return password;
+    }
+    
+        public int check(String username, String password){
         String sql = "SELECT profile_id FROM login " +
                 "WHERE username=? AND password=?";
         int profileid = -1; // if id is not initalized in try, then we 
@@ -40,7 +63,7 @@ public class LoginCheck extends Query {
         
         //connect to database (inherited from Query)
         Connection conn = connect();
-        System.out.print("Yas");
+        System.out.print("yas");
         try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
            
             // set the values in the sql command
@@ -65,7 +88,7 @@ public class LoginCheck extends Query {
     public static void main(String[] args) {
         LoginCheck app = new LoginCheck();
         
-        int id = app.check("crs0050", "password");
-        System.out.println(id);
+        int id = app.check("test", "test");
+        System.out.print(id);
     }
 }
