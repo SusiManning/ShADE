@@ -10,7 +10,6 @@ package GUI;
  */
 public class gui2 extends javax.swing.JFrame {
 
-    Login loginCreds = new Login();
     /**
      * Creates new form gui2
      */
@@ -47,6 +46,9 @@ public class gui2 extends javax.swing.JFrame {
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         addClassButton = new javax.swing.JButton();
+        addClassesButtons = new javax.swing.JSplitPane();
+        addClassButton2 = new javax.swing.JButton();
+        findRideButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,7 +63,7 @@ public class gui2 extends javax.swing.JFrame {
 
         loginButtons.setBackground(new java.awt.Color(0, 0, 0));
 
-        letsRideButton.setText("Let's Ride!");
+        letsRideButton.setText("Find a Ride!");
         letsRideButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 letsRideButtonActionPerformed(evt);
@@ -79,7 +81,7 @@ public class gui2 extends javax.swing.JFrame {
 
         loginButtons.setRightComponent(loginButtons2);
 
-        editAccount.setText("Edit Account");
+        editAccount.setText("View Account");
         editAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editAccountActionPerformed(evt);
@@ -136,6 +138,19 @@ public class gui2 extends javax.swing.JFrame {
 
         buttonPanel.add(accountButtons, "card4");
 
+        addClassButton2.setText("Add Class");
+        addClassesButtons.setLeftComponent(addClassButton2);
+
+        findRideButton.setText("Find a Ride!");
+        findRideButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findRideButtonActionPerformed(evt);
+            }
+        });
+        addClassesButtons.setRightComponent(findRideButton);
+
+        buttonPanel.add(addClassesButtons, "card6");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,8 +177,8 @@ public class gui2 extends javax.swing.JFrame {
         
         buttonPanel.removeAll();
         buttonPanel.add(matchButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
+        buttonPanel.repaint();
+        buttonPanel.revalidate(); 
     }//GEN-LAST:event_letsRideButtonActionPerformed
 
     private void editAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountButtonActionPerformed
@@ -171,11 +186,11 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.add(info1);
         parentPanel.repaint();
         parentPanel.revalidate(); 
-        
+
         buttonPanel.removeAll();
         buttonPanel.add(accountButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
+        buttonPanel.repaint();
+        buttonPanel.revalidate(); 
     }//GEN-LAST:event_editAccountButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
@@ -186,8 +201,8 @@ public class gui2 extends javax.swing.JFrame {
         
         buttonPanel.removeAll();
         buttonPanel.add(loginButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
+        buttonPanel.repaint();
+        buttonPanel.revalidate(); 
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -198,8 +213,8 @@ public class gui2 extends javax.swing.JFrame {
         
         buttonPanel.removeAll();
         buttonPanel.add(matchButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
+        buttonPanel.repaint();
+        buttonPanel.revalidate(); 
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void editAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountActionPerformed
@@ -210,8 +225,8 @@ public class gui2 extends javax.swing.JFrame {
         
         buttonPanel.removeAll();
         buttonPanel.add(accountButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
+        buttonPanel.repaint();
+        buttonPanel.revalidate(); 
     }//GEN-LAST:event_editAccountActionPerformed
 
     private void createAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountActionPerformed
@@ -222,8 +237,8 @@ public class gui2 extends javax.swing.JFrame {
         
         buttonPanel.removeAll();
         buttonPanel.add(accountButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate();
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
     }//GEN-LAST:event_createAccountActionPerformed
 
     private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
@@ -233,10 +248,22 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.revalidate(); 
         
         buttonPanel.removeAll();
-        buttonPanel.add(accountButtons);
-        parentPanel.repaint();
-        parentPanel.revalidate();
+        buttonPanel.add(addClassesButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
     }//GEN-LAST:event_addClassButtonActionPerformed
+
+    private void findRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findRideButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(ride1);
+        parentPanel.repaint();
+        parentPanel.revalidate(); 
+        
+        buttonPanel.removeAll();
+        buttonPanel.add(matchButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
+    }//GEN-LAST:event_findRideButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,12 +303,15 @@ public class gui2 extends javax.swing.JFrame {
     private javax.swing.JSplitPane accountButtons;
     private javax.swing.JSplitPane accountButtons2;
     private javax.swing.JButton addClassButton;
+    private javax.swing.JButton addClassButton2;
     private GUI.AddClasses addClasses1;
+    private javax.swing.JSplitPane addClassesButtons;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton cancelButton;
     private javax.swing.JButton createAccount;
     private javax.swing.JButton editAccount;
     private javax.swing.JButton editAccountButton;
+    private javax.swing.JButton findRideButton;
     private GUI.Info info1;
     private javax.swing.JButton letsRideButton;
     private GUI.Login login1;
