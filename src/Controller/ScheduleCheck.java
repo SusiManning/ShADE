@@ -35,6 +35,7 @@ public class ScheduleCheck extends Query {
         
         //connect to database (inherited from Query)
         Connection conn = connect();
+        int classID = -1;
         try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
            
             // set the values in the sql command
@@ -43,14 +44,15 @@ public class ScheduleCheck extends Query {
             pstmt.setString(3, days);
             ResultSet rs  = pstmt.executeQuery();
             
-            int classID = rs.getInt(1);
+            while(rs.next()){
+                classID = rs.getInt(1);
+            }
             
-            return classID;
             
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return -1;
+        return classID;
     }
     
     public int checkClass(Course course){
@@ -64,22 +66,23 @@ public class ScheduleCheck extends Query {
         
         //connect to database (inherited from Query)
         Connection conn = connect();
+        int classID = -1;
         try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
-           
+            
             // set the values in the sql command
             pstmt.setString(1, building);
             pstmt.setString(2, time);
             pstmt.setString(3, days);
             ResultSet rs  = pstmt.executeQuery();
             
-            int classID = rs.getInt(1);
-            
-            return classID;
+            while(rs.next()){
+                classID = rs.getInt(1);
+            }
             
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return -1;
+        return classID;
     }
     
     public ArrayList<Profile> checkMatch(int profileID, int classID) {
@@ -99,7 +102,7 @@ public class ScheduleCheck extends Query {
            
             // set the values in the sql command
             pstmt.setInt(1, profileID);
-            pstmt.setInt(2, classID);;
+            pstmt.setInt(2, classID);
             
             //get results
             ResultSet rs  = pstmt.executeQuery();
@@ -137,7 +140,7 @@ public class ScheduleCheck extends Query {
     public static void main(String[] args) {
         ScheduleCheck app = new ScheduleCheck();
 
-        int i = app.checkClass("Materials Science Building", "3:15PM", "MWF");
+        int i = app.checkClass("SST", "1:00", "TTh");
         System.out.println(i);
     }
 }

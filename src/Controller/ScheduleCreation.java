@@ -15,7 +15,6 @@ import java.sql.SQLException;
  */
 
 public class ScheduleCreation extends Push {
-    private String courseName; //I dont know if this is needed
     private String location; 
     private String time; 
     private String days;
@@ -28,7 +27,10 @@ public class ScheduleCreation extends Push {
         
         int classcreated;
         classcreated = check.checkClass(location, time, days);
-        
+        System.out.print(classcreated);
+        System.out.print(location);
+        System.out.print(time);
+        System.out.print(days);
         //only create if class is not in the database already
         if(classcreated == -1){
         
@@ -70,7 +72,7 @@ public class ScheduleCreation extends Push {
         
         Course course = new Course();
         course.setCourseDays("MWF");
-        course.setCourseLocation("Shelby");
+        course.setCourseLocation("SST");
         course.setCourseTime("6:30PM");
         app.addCourse(course);
         

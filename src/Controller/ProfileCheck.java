@@ -34,6 +34,7 @@ public class ProfileCheck extends Query {
      * to look for the profile id corresponding to the inputs. Loops through all
      * results to find corresponding id.
      * @param profile_id
+     * @return
      */
     public Profile check(int profile_id){
         String sql = "SELECT first_name, last_name, email, phone FROM profiles " +

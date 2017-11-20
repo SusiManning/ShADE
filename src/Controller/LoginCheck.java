@@ -28,6 +28,7 @@ public class LoginCheck extends Query {
      * a connection to the database is initialized, and a statement is prepared
      * to look for the password corresponding to the input profile id. Loops through all
      * results to find corresponding password.
+     * @param profileid
      * @return 
      */
     public String checkPass(int profileid){
@@ -54,25 +55,26 @@ public class LoginCheck extends Query {
         }
         return password;
     }
-
-    public int check (String username, String password){
-        int id;
-        
-        id = logincheck(username, password);
-        
-        return id;
-    }
     
+<<<<<<< HEAD
     private int logincheck(String username, String password){
+=======
+        public int check(String username, String password){
+>>>>>>> d0432392c614f8ee3c04e184f9a42beef30f2938
         String sql = "SELECT profile_id FROM login " +
                 "WHERE username=? AND password=?";
         int profileid = -1; // if id is not initalized in try, then we 
         //know the login is not in database.
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> d0432392c614f8ee3c04e184f9a42beef30f2938
         //connect to database (inherited from Query)
         Connection conn = connect();
         System.out.print("yas");
         try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
+<<<<<<< HEAD
 
             // set the values in the sql command
             pstmt.setString(1, username);
@@ -80,6 +82,15 @@ public class LoginCheck extends Query {
 
             ResultSet rs  = pstmt.executeQuery();
 
+=======
+           
+            // set the values in the sql command
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+ 
+            ResultSet rs  = pstmt.executeQuery();
+            
+>>>>>>> d0432392c614f8ee3c04e184f9a42beef30f2938
             // loop through the result set
             while (rs.next()){
                 profileid = rs.getInt(1); 
@@ -93,10 +104,10 @@ public class LoginCheck extends Query {
     
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         LoginCheck app = new LoginCheck();
         
         int id = app.check("test", "test");
         System.out.print(id);
-    }*/
+    }
 }
