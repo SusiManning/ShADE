@@ -9,6 +9,8 @@ import Controller.LoginCheck;
 import Controller.LoginCreation;
 import Controller.ProfileCheck;
 import Controller.ProfileCreation;
+import Controller.ProfileEdit;
+import Controller.Singleton;
 import DataModel.Profile;
 import java.util.Set;
 
@@ -17,23 +19,18 @@ import java.util.Set;
  * @author erd0008
  */
 public class Info extends javax.swing.JPanel {
-
+    Singleton values = Singleton.getInstance();
     ProfileCreation profileCreate = new ProfileCreation();
     LoginCreation login = new LoginCreation();
     ProfileCheck profileCheck = new ProfileCheck();
     LoginCheck loginCheck = new LoginCheck();
     Profile profile = new Profile();
+    ProfileEdit edit = new ProfileEdit();
     /**
      * Creates new form Info
      */
     public Info() {
         initComponents();
-        
-        firstNameInput.setText("");
-        lastNameInput.setText("");
-        emailInput.setText("");
-        passwordInput.setText("");
-        phoneInput.setText("");
     }
 
     /**
@@ -45,7 +42,6 @@ public class Info extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         passwordInput = new javax.swing.JTextField();
@@ -62,8 +58,6 @@ public class Info extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 240, 0));
-
-        cancelButton.setText("Cancel");
 
         saveButton.setText("Save");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +76,7 @@ public class Info extends javax.swing.JPanel {
 
         jLabel6.setText("E-mail Address:");
 
-        editAccount.setText("View Account Info: enter full email and click here");
+        editAccount.setText("Click to Edit Information");
         editAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editAccountActionPerformed(evt);
@@ -118,13 +112,10 @@ public class Info extends javax.swing.JPanel {
                             .addComponent(firstNameInput, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(editAccount)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(editAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13))
             .addGroup(layout.createSequentialGroup()
@@ -161,59 +152,58 @@ public class Info extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(phoneInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8))
-                        .addGap(30, 30, 30)
-                        .addComponent(editAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(saveButton)
-                            .addComponent(cancelButton))))
+                            .addComponent(editAccount)
+                            .addComponent(saveButton))))
                 .addContainerGap(105, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // Save inputs to profile
+          
         String fname = firstNameInput.getText();
         String lname = lastNameInput.getText();
         String email = emailInput.getText();
         String phone = phoneInput.getText();
         String password = passwordInput.getText();
         
-        profileCreate.create(fname, lname, email, phone);
-        int id = profileCheck.getID(email); //Find profile id
-        int end = email.indexOf("@"); //Take substring of email to get username
-        login.create(email.substring(0, end) ,password, id); //Create login
+        if(values.profid == -1){
+            profileCreate.create(fname, lname, email, phone);
+            int id = profileCheck.getID(email); //Find profile id
+            values.profid = id;
+            values.logid = id;
+            int end = email.indexOf("@"); //Take substring of email to get username
+            login.create(email.substring(0, end) ,password, id); //Create login
+        }
+        else{
+              edit.edit(values.profid, fname, lname, email, phone);
+        }
     }//GEN-LAST:event_saveButtonActionPerformed
 
     private void editAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountActionPerformed
         //Check inputs
-        String fname = firstNameInput.getText();
-        String lname = lastNameInput.getText();
-        String email = emailInput.getText();
-        String phone = phoneInput.getText();
-        String password = passwordInput.getText();
+//        String fname = firstNameInput.getText();
+//        String lname = lastNameInput.getText();
+//        String email = emailInput.getText();
+//        String phone = phoneInput.getText();
+//        String password = passwordInput.getText();
         
-        //If user followed directions and only email is filled out, fill out the 
-        //rest of the fields
-        if(fname.equals("") && lname.equals("") && password.equals("") && 
-                phone.equals("") && !email.equals(""))
-        {
-            int id = profileCheck.getID(email);
-            String pass = loginCheck.checkPass(id);
-            profile = profileCheck.check(id);
-            firstNameInput.setText(profile.getFirstName());
-            lastNameInput.setText(profile.getLastName());
-            emailInput.setText(profile.getEmail());
-            phoneInput.setText(profile.getPhoneNumber());
-            passwordInput.setText(pass);
-            passwordInput.setEditable(false);
-            emailInput.setEditable(false);
-        }
+        int id = values.profid;
+        System.out.print(id);
+        String pass = loginCheck.checkPass(id);
+        profile = profileCheck.check(id);
+        firstNameInput.setText(profile.getFirstName());
+        lastNameInput.setText(profile.getLastName());
+        emailInput.setText(profile.getEmail());
+        phoneInput.setText(profile.getPhoneNumber());
+        passwordInput.setText(pass);
+        passwordInput.setEditable(false);
     }//GEN-LAST:event_editAccountActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancelButton;
     private javax.swing.JButton editAccount;
     private javax.swing.JTextField emailInput;
     private javax.swing.JTextField firstNameInput;
