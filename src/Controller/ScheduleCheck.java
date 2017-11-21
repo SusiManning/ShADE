@@ -137,6 +137,46 @@ public class ScheduleCheck extends Query {
         return profile;
     }
     
+    public ArrayList<Course> getSchedule (int profileID){
+        ArrayList <Course> schedule = new ArrayList();
+        
+        String sql = "SELECT student_id, class_id FROM student_classes " +
+                "WHERE student_id = ?";
+        
+        //connect to database (inherited from Query)
+        Connection conn = connect();
+        try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           
+            // set the values in the sql command
+            pstmt.setInt(1, profileID);
+            pstmt.setInt(2, classID);
+            
+            //get results
+            ResultSet rs  = pstmt.executeQuery();
+            
+            //loop to get profileIDs
+            while (rs.next()){
+                student_match = rs.getInt(1);
+                
+                //if the current studentID does not equal 
+                //the profileID passed
+                if (student_match != profileID)
+                    //add the matching student
+                    profileIDs.add(rs.getInt(1));
+            }
+            
+            for (Integer profileid : profileIDs ){
+                profile = getProfileFromClass(profileid); //could use Profile Check class
+                profiles.add(profile);
+            }
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        
+        return schedule;
+    }
+    
     public static void main(String[] args) {
         ScheduleCheck app = new ScheduleCheck();
 
