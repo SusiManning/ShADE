@@ -6,6 +6,7 @@
 package GUI;
 
 import Controller.LoginCheck;
+import Controller.Singleton;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Login extends javax.swing.JPanel {
      */
     public Login() {
         initComponents();
-        loginMessageBox.setText("Welcome to ShADE!\nEnter your username and password\nor create a new account.");
+        loginMessageBox.setText("               Welcome to ShADE!\n     Enter your username and password\n            or create a new account.\n    Your username is the part of your first\n         registered email before the @.");
     }
 
     /**
@@ -34,7 +35,6 @@ public class Login extends javax.swing.JPanel {
         usernameInput = new javax.swing.JTextField();
         passwordInput = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
-        createAccountButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         loginMessageBox = new javax.swing.JEditorPane();
         picture = new javax.swing.JLabel();
@@ -42,7 +42,7 @@ public class Login extends javax.swing.JPanel {
         setBackground(new java.awt.Color(51, 255, 51));
 
         goButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        goButton.setText("Let's Ride!");
+        goButton.setText("Login");
         goButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 goButtonMouseClicked(evt);
@@ -72,18 +72,6 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
-        createAccountButton.setText("Create an Account");
-        createAccountButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                createAccountButtonMouseClicked(evt);
-            }
-        });
-        createAccountButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createAccountButtonActionPerformed(evt);
-            }
-        });
-
         jScrollPane1.setViewportView(loginMessageBox);
 
         picture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/Screen Shot 2017-11-01 at 11.27.25 PM.png"))); // NOI18N
@@ -100,35 +88,35 @@ public class Login extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(picture, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usernameInput, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordInput, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(usernameInput, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                                    .addComponent(passwordInput, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE))
+                                .addGap(46, 46, 46)))
+                        .addGap(50, 50, 50))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(goButton)
-                        .addGap(98, 98, 98))
-                    .addComponent(createAccountButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(goButton, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
+                        .addGap(108, 108, 108)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(16, 16, 16)
                         .addComponent(usernameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(12, 12, 12)
                         .addComponent(passwordInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(goButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(createAccountButton))
+                        .addComponent(goButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(picture)))
@@ -141,12 +129,6 @@ public class Login extends javax.swing.JPanel {
     private void usernameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameInputActionPerformed
   
     }//GEN-LAST:event_usernameInputActionPerformed
-
-    private void createAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAccountButtonMouseClicked
-        // TODO add your handling code here:
-        this.setVisible(false);
-        new Info().setVisible(true); // Main Form to show after the Login Form..
-    }//GEN-LAST:event_createAccountButtonMouseClicked
 
     private void goButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goButtonMouseClicked
         // TODO add your handling code here:
@@ -164,21 +146,18 @@ public class Login extends javax.swing.JPanel {
         LoginCheck login = new LoginCheck();
         String userText = usernameInput.getText();
         String passText = new String(passwordInput.getPassword());
-        int logval = login.check(userText, passText);
-        System.out.print(logval);
-        if (logval == -1)
+        Singleton values = Singleton.getInstance();
+        values.logid = login.check(userText, passText);
+        values.profid = login.check(userText, passText);
+        System.out.print(values.logid);
+        if (values.logid == -1)
             loginMessageBox.setText("Account not found.\nTry Again or select 'Create Account'.");
         else
-            loginMessageBox.setText("Account found!\nSelect 'Let's Ride!' or 'Edit Account'.");
+            loginMessageBox.setText("Account found!\nSelect 'Find a Ride' or 'Edit Account'.");
     }//GEN-LAST:event_goButtonActionPerformed
-
-    private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
-        loginMessageBox.setText("Want to create an account? Great! Click 'Go'.");
-    }//GEN-LAST:event_createAccountButtonActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton createAccountButton;
     private javax.swing.JButton goButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;

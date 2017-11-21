@@ -33,20 +33,18 @@ public class gui2 extends javax.swing.JFrame {
         addClasses1 = new GUI.AddClasses();
         ride1 = new GUI.Ride();
         buttonPanel = new javax.swing.JPanel();
-        loginButtons = new javax.swing.JSplitPane();
-        loginButtons2 = new javax.swing.JSplitPane();
-        letsRideButton = new javax.swing.JButton();
+        loginButtons = new javax.swing.JPanel();
         createAccount = new javax.swing.JButton();
+        letsRideButton = new javax.swing.JButton();
         editAccount = new javax.swing.JButton();
-        matchButtons = new javax.swing.JSplitPane();
+        matchButtons = new javax.swing.JPanel();
         editAccountButton = new javax.swing.JButton();
         matchRideButton = new javax.swing.JButton();
-        accountButtons = new javax.swing.JSplitPane();
-        accountButtons2 = new javax.swing.JSplitPane();
+        accountButtons = new javax.swing.JPanel();
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         addClassButton = new javax.swing.JButton();
-        addClassesButtons = new javax.swing.JSplitPane();
+        addClassesButtons = new javax.swing.JPanel();
         addClassButton2 = new javax.swing.JButton();
         findRideButton = new javax.swing.JButton();
 
@@ -56,59 +54,100 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.add(login1, "card6");
         parentPanel.add(info1, "card6");
         parentPanel.add(addClasses1, "card6");
-        parentPanel.add(ride1, "card2");
+        parentPanel.add(ride1, "card6");
 
         buttonPanel.setBackground(new java.awt.Color(0, 0, 0));
         buttonPanel.setLayout(new java.awt.CardLayout());
 
         loginButtons.setBackground(new java.awt.Color(0, 0, 0));
 
-        letsRideButton.setText("Find a Ride!");
-        letsRideButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                letsRideButtonActionPerformed(evt);
-            }
-        });
-        loginButtons2.setLeftComponent(letsRideButton);
-
-        createAccount.setText("Go Make My Account");
+        createAccount.setText("Create Account");
         createAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createAccountActionPerformed(evt);
             }
         });
-        loginButtons2.setRightComponent(createAccount);
 
-        loginButtons.setRightComponent(loginButtons2);
+        letsRideButton.setText("Find a Ride");
+        letsRideButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                letsRideButtonActionPerformed(evt);
+            }
+        });
 
-        editAccount.setText("View Account");
+        editAccount.setText("Edit Account");
         editAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editAccountActionPerformed(evt);
             }
         });
-        loginButtons.setLeftComponent(editAccount);
 
-        buttonPanel.add(loginButtons, "card4");
+        javax.swing.GroupLayout loginButtonsLayout = new javax.swing.GroupLayout(loginButtons);
+        loginButtons.setLayout(loginButtonsLayout);
+        loginButtonsLayout.setHorizontalGroup(
+            loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(editAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(letsRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(createAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        loginButtonsLayout.setVerticalGroup(
+            loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createSequentialGroup()
+                .addContainerGap(7, Short.MAX_VALUE)
+                .addGroup(loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editAccount)
+                    .addComponent(letsRideButton)
+                    .addComponent(createAccount))
+                .addContainerGap())
+        );
+
+        buttonPanel.add(loginButtons, "card6");
 
         matchButtons.setBackground(new java.awt.Color(0, 0, 0));
 
-        editAccountButton.setText("Edit my Account");
+        editAccountButton.setText("Edit Account");
         editAccountButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editAccountButtonActionPerformed(evt);
             }
         });
-        matchButtons.setLeftComponent(editAccountButton);
 
-        matchRideButton.setText("Find My Ride!");
-        matchButtons.setRightComponent(matchRideButton);
+        matchRideButton.setText("Find a Ride!");
+        matchRideButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matchRideButtonActionPerformed(evt);
+            }
+        });
 
-        buttonPanel.add(matchButtons, "card3");
+        javax.swing.GroupLayout matchButtonsLayout = new javax.swing.GroupLayout(matchButtons);
+        matchButtons.setLayout(matchButtonsLayout);
+        matchButtonsLayout.setHorizontalGroup(
+            matchButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(matchButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(editAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(matchRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        matchButtonsLayout.setVerticalGroup(
+            matchButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(matchButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(matchButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editAccountButton)
+                    .addComponent(matchRideButton))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        buttonPanel.add(matchButtons, "card6");
 
         accountButtons.setBackground(new java.awt.Color(0, 0, 0));
-
-        accountButtons2.setBackground(new java.awt.Color(0, 0, 0));
 
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +155,6 @@ public class gui2 extends javax.swing.JFrame {
                 cancelButtonActionPerformed(evt);
             }
         });
-        accountButtons2.setLeftComponent(cancelButton);
 
         saveButton.setText("Find A Ride");
         saveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -124,9 +162,6 @@ public class gui2 extends javax.swing.JFrame {
                 saveButtonActionPerformed(evt);
             }
         });
-        accountButtons2.setRightComponent(saveButton);
-
-        accountButtons.setRightComponent(accountButtons2);
 
         addClassButton.setText("Add Class");
         addClassButton.addActionListener(new java.awt.event.ActionListener() {
@@ -134,12 +169,36 @@ public class gui2 extends javax.swing.JFrame {
                 addClassButtonActionPerformed(evt);
             }
         });
-        accountButtons.setLeftComponent(addClassButton);
 
-        buttonPanel.add(accountButtons, "card4");
+        javax.swing.GroupLayout accountButtonsLayout = new javax.swing.GroupLayout(accountButtons);
+        accountButtons.setLayout(accountButtonsLayout);
+        accountButtonsLayout.setHorizontalGroup(
+            accountButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(accountButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(addClassButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        accountButtonsLayout.setVerticalGroup(
+            accountButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(accountButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(accountButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addClassButton)
+                    .addComponent(cancelButton)
+                    .addComponent(saveButton))
+                .addGap(0, 8, Short.MAX_VALUE))
+        );
+
+        buttonPanel.add(accountButtons, "card7");
+
+        addClassesButtons.setBackground(new java.awt.Color(0, 0, 0));
 
         addClassButton2.setText("Add Class");
-        addClassesButtons.setLeftComponent(addClassButton2);
 
         findRideButton.setText("Find a Ride!");
         findRideButton.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +206,27 @@ public class gui2 extends javax.swing.JFrame {
                 findRideButtonActionPerformed(evt);
             }
         });
-        addClassesButtons.setRightComponent(findRideButton);
+
+        javax.swing.GroupLayout addClassesButtonsLayout = new javax.swing.GroupLayout(addClassesButtons);
+        addClassesButtons.setLayout(addClassesButtonsLayout);
+        addClassesButtonsLayout.setHorizontalGroup(
+            addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addClassesButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addClassButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(findRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        addClassesButtonsLayout.setVerticalGroup(
+            addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addClassesButtonsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addClassButton2)
+                    .addComponent(findRideButton))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         buttonPanel.add(addClassesButtons, "card6");
 
@@ -155,7 +234,7 @@ public class gui2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(parentPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 709, Short.MAX_VALUE)
+            .addComponent(parentPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(buttonPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -168,30 +247,6 @@ public class gui2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void letsRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letsRideButtonActionPerformed
-        parentPanel.removeAll();
-        parentPanel.add(ride1);
-        parentPanel.repaint();
-        parentPanel.revalidate();
-        
-        buttonPanel.removeAll();
-        buttonPanel.add(matchButtons);
-        buttonPanel.repaint();
-        buttonPanel.revalidate(); 
-    }//GEN-LAST:event_letsRideButtonActionPerformed
-
-    private void editAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountButtonActionPerformed
-        parentPanel.removeAll();
-        parentPanel.add(info1);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
-
-        buttonPanel.removeAll();
-        buttonPanel.add(accountButtons);
-        buttonPanel.repaint();
-        buttonPanel.revalidate(); 
-    }//GEN-LAST:event_editAccountButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         parentPanel.removeAll();
@@ -217,6 +272,42 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.revalidate(); 
     }//GEN-LAST:event_saveButtonActionPerformed
 
+    private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(addClasses1);
+        parentPanel.repaint();
+        parentPanel.revalidate(); 
+        
+        buttonPanel.removeAll();
+        buttonPanel.add(addClassesButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
+    }//GEN-LAST:event_addClassButtonActionPerformed
+
+    private void findRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findRideButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(ride1);
+        parentPanel.repaint();
+        parentPanel.revalidate(); 
+        
+        buttonPanel.removeAll();
+        buttonPanel.add(matchButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
+    }//GEN-LAST:event_findRideButtonActionPerformed
+
+    private void letsRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letsRideButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(ride1);
+        parentPanel.repaint();
+        parentPanel.revalidate(); 
+        
+        buttonPanel.removeAll();
+        buttonPanel.add(matchButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
+    }//GEN-LAST:event_letsRideButtonActionPerformed
+
     private void editAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountActionPerformed
         parentPanel.removeAll();
         parentPanel.add(info1);
@@ -241,19 +332,19 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.revalidate();
     }//GEN-LAST:event_createAccountActionPerformed
 
-    private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
+    private void editAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountButtonActionPerformed
         parentPanel.removeAll();
-        parentPanel.add(addClasses1);
+        parentPanel.add(info1);
         parentPanel.repaint();
         parentPanel.revalidate(); 
-        
-        buttonPanel.removeAll();
-        buttonPanel.add(addClassesButtons);
-        buttonPanel.repaint();
-        buttonPanel.revalidate();
-    }//GEN-LAST:event_addClassButtonActionPerformed
 
-    private void findRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findRideButtonActionPerformed
+        buttonPanel.removeAll();
+        buttonPanel.add(accountButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate(); 
+    }//GEN-LAST:event_editAccountButtonActionPerformed
+
+    private void matchRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matchRideButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(ride1);
         parentPanel.repaint();
@@ -263,7 +354,7 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.add(matchButtons);
         buttonPanel.repaint();
         buttonPanel.revalidate();
-    }//GEN-LAST:event_findRideButtonActionPerformed
+    }//GEN-LAST:event_matchRideButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -300,12 +391,11 @@ public class gui2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JSplitPane accountButtons;
-    private javax.swing.JSplitPane accountButtons2;
+    private javax.swing.JPanel accountButtons;
     private javax.swing.JButton addClassButton;
     private javax.swing.JButton addClassButton2;
     private GUI.AddClasses addClasses1;
-    private javax.swing.JSplitPane addClassesButtons;
+    private javax.swing.JPanel addClassesButtons;
     private javax.swing.JPanel buttonPanel;
     private javax.swing.JButton cancelButton;
     private javax.swing.JButton createAccount;
@@ -315,9 +405,8 @@ public class gui2 extends javax.swing.JFrame {
     private GUI.Info info1;
     private javax.swing.JButton letsRideButton;
     private GUI.Login login1;
-    private javax.swing.JSplitPane loginButtons;
-    private javax.swing.JSplitPane loginButtons2;
-    private javax.swing.JSplitPane matchButtons;
+    private javax.swing.JPanel loginButtons;
+    private javax.swing.JPanel matchButtons;
     private javax.swing.JButton matchRideButton;
     private javax.swing.JPanel parentPanel;
     private GUI.Ride ride1;
