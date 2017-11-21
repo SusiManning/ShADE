@@ -54,7 +54,7 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.add(login1, "card6");
         parentPanel.add(info1, "card6");
         parentPanel.add(addClasses1, "card6");
-        parentPanel.add(ride1, "card2");
+        parentPanel.add(ride1, "card6");
 
         buttonPanel.setBackground(new java.awt.Color(0, 0, 0));
         buttonPanel.setLayout(new java.awt.CardLayout());
