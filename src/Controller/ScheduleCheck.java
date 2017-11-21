@@ -142,21 +142,21 @@ public class ScheduleCheck extends Query {
         
         String sql = "SELECT student_id, class_id FROM student_classes " +
                 "WHERE student_id = ?";
-        
+        int class_id;
+        ArrayList <Integer> classes = new ArrayList();
         //connect to database (inherited from Query)
         Connection conn = connect();
         try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
            
             // set the values in the sql command
             pstmt.setInt(1, profileID);
-            pstmt.setInt(2, classID);
             
             //get results
             ResultSet rs  = pstmt.executeQuery();
             
             //loop to get profileIDs
             while (rs.next()){
-                student_match = rs.getInt(1);
+                classes.add(rs.getInt(1));
                 
                 //if the current studentID does not equal 
                 //the profileID passed
@@ -165,10 +165,6 @@ public class ScheduleCheck extends Query {
                     profileIDs.add(rs.getInt(1));
             }
             
-            for (Integer profileid : profileIDs ){
-                profile = getProfileFromClass(profileid); //could use Profile Check class
-                profiles.add(profile);
-            }
             
         } catch (SQLException e) {
             System.out.println(e.getMessage());
