@@ -7,8 +7,8 @@
 package DataModel;
 
 public class Profile {                               //Holds the user's schedule.
-    public String firstname, lastname, email, phonenum;        //Holds the user's first name, last name, email, and phone number respectively.                                  //Holds the user's vehicle.
-    public int profile_id;                                     //Holds the profile id of a user's profile.
+    private String firstname, lastname, email, phonenum;        //Holds the user's first name, last name, email, and phone number respectively.                                  //Holds the user's vehicle.
+    private int profile_id;                                     //Holds the profile id of a user's profile.
     
     /**
      * Default constructor for Profile class.
@@ -55,6 +55,7 @@ public class Profile {                               //Holds the user's schedule
     
     /**
      *Method to return profile_ide from a given profile.
+     * @return profile_id
      */
     public int getID(){
         return profile_id;
