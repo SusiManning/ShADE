@@ -157,12 +157,6 @@ public class ScheduleCheck extends Query {
             //loop to get profileIDs
             while (rs.next()){
                 classes.add(rs.getInt(1));
-                
-                //if the current studentID does not equal 
-                //the profileID passed
-                if (student_match != profileID)
-                    //add the matching student
-                    profileIDs.add(rs.getInt(1));
             }
             
             
@@ -170,7 +164,46 @@ public class ScheduleCheck extends Query {
             System.out.println(e.getMessage());
         }
         
+        for (Integer courseid : classes ){
+            schedule.add(getCourse(courseid));
+        }
+        
         return schedule;
+    }
+    
+    private Course getCourse(int course_id) {
+        Course course = new Course();
+        
+        String sql = "SELECT building, time, days FROM classes " +
+                "WHERE class_id=?";
+        String building, time, days;
+        building = "";
+        time = "";
+        days = "";
+        //connect to database (inherited from Query)
+        Connection conn = connect();
+        try (PreparedStatement pstmt  = conn.prepareStatement(sql)){
+           
+            // set the values in the sql command
+            pstmt.setInt(1, course_id);
+            ResultSet rs  = pstmt.executeQuery();
+            
+            while(rs.next()){
+                building = rs.getString(1);
+                time = rs.getString(2);
+                days = rs.getString(3);
+            }
+            
+            course.setCourseLocation(building);
+            course.setCourseTime(time);
+            course.setCourseDays(days);
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        
+        return course;
+        
     }
     
     public static void main(String[] args) {
