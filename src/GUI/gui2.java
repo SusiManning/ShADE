@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package GUI;
+import java.awt.Color;
+import java.awt.Component;
 /**
  *
  * @author SusiManning
@@ -17,6 +19,11 @@ public class gui2 extends javax.swing.JFrame {
         initComponents();
         
     }
+    
+    public static  void changeColor (Component component, Color color){
+        component.setBackground(color);
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,6 +34,8 @@ public class gui2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton7 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         parentPanel = new javax.swing.JPanel();
         login1 = new GUI.Login();
         info1 = new GUI.Info();
@@ -37,6 +46,11 @@ public class gui2 extends javax.swing.JFrame {
         createAccount = new javax.swing.JButton();
         letsRideButton = new javax.swing.JButton();
         editAccount = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
         matchButtons = new javax.swing.JPanel();
         editAccountButton = new javax.swing.JButton();
         matchRideButton = new javax.swing.JButton();
@@ -48,13 +62,17 @@ public class gui2 extends javax.swing.JFrame {
         addClassButton2 = new javax.swing.JButton();
         findRideButton = new javax.swing.JButton();
 
+        jButton7.setText("jButton5");
+
+        jButton9.setText("jButton5");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         parentPanel.setLayout(new java.awt.CardLayout());
         parentPanel.add(login1, "card6");
         parentPanel.add(info1, "card6");
         parentPanel.add(addClasses1, "card6");
-        parentPanel.add(ride1, "card6");
+        parentPanel.add(ride1, "card2");
 
         buttonPanel.setBackground(new java.awt.Color(0, 0, 0));
         buttonPanel.setLayout(new java.awt.CardLayout());
@@ -82,6 +100,38 @@ public class gui2 extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(255, 204, 153));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("BG Colors:");
+
+        jButton12.setBackground(new java.awt.Color(102, 0, 102));
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jButton13.setBackground(new java.awt.Color(153, 153, 153));
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setBackground(new java.awt.Color(0, 240, 0));
+        jButton14.setForeground(new java.awt.Color(0, 240, 0));
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout loginButtonsLayout = new javax.swing.GroupLayout(loginButtons);
         loginButtons.setLayout(loginButtonsLayout);
         loginButtonsLayout.setHorizontalGroup(
@@ -93,16 +143,32 @@ public class gui2 extends javax.swing.JFrame {
                 .addComponent(letsRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(createAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(27, 27, 27)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         loginButtonsLayout.setVerticalGroup(
             loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
-                .addGroup(loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editAccount)
-                    .addComponent(letsRideButton)
-                    .addComponent(createAccount))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(editAccount)
+                        .addComponent(letsRideButton)
+                        .addComponent(createAccount)
+                        .addComponent(jLabel1))
+                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -131,7 +197,7 @@ public class gui2 extends javax.swing.JFrame {
             .addGroup(matchButtonsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(editAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
                 .addComponent(matchRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -176,7 +242,7 @@ public class gui2 extends javax.swing.JFrame {
             accountButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(accountButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addClassButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -213,7 +279,7 @@ public class gui2 extends javax.swing.JFrame {
             addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addClassesButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(addClassButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
+                .addComponent(addClassButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(findRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -240,7 +306,7 @@ public class gui2 extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(parentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 399, Short.MAX_VALUE)
+                .addComponent(parentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 415, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
                 .addComponent(buttonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -258,6 +324,7 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.add(loginButtons);
         buttonPanel.repaint();
         buttonPanel.revalidate(); 
+     
     }//GEN-LAST:event_cancelButtonActionPerformed
 
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
@@ -312,7 +379,8 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.removeAll();
         parentPanel.add(info1);
         parentPanel.repaint();
-        parentPanel.revalidate(); 
+        parentPanel.revalidate();
+                             
         
         buttonPanel.removeAll();
         buttonPanel.add(accountButtons);
@@ -342,6 +410,7 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.add(accountButtons);
         buttonPanel.repaint();
         buttonPanel.revalidate(); 
+        
     }//GEN-LAST:event_editAccountButtonActionPerformed
 
     private void matchRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matchRideButtonActionPerformed
@@ -355,6 +424,38 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.repaint();
         buttonPanel.revalidate();
     }//GEN-LAST:event_matchRideButtonActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        changeColor(info1,new Color(255,204,153));
+        changeColor(ride1,new Color(255,204,153));
+        changeColor(login1,new Color(255,204,153));
+        changeColor(addClasses1,new Color(255,204,153));
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+         changeColor(info1,new Color(102,0,102));
+        changeColor(ride1,new Color(102,0,102));
+        changeColor(login1,new Color(102,0,102));
+        changeColor(addClasses1,new Color(102,0,102));
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+         changeColor(info1,new Color(153,153,153));
+        changeColor(ride1,new Color(153,153,153));
+        changeColor(login1,new Color(153,153,153));
+        changeColor(addClasses1,new Color(153,153,153));
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+         changeColor(info1,new Color(0,240,0));
+        changeColor(ride1,new Color(0,240,0));
+        changeColor(login1,new Color(0,240,0));
+        changeColor(addClasses1,new Color(0,240,0));
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -386,6 +487,7 @@ public class gui2 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new gui2().setVisible(true);
+                
             }
         });
     }
@@ -403,6 +505,13 @@ public class gui2 extends javax.swing.JFrame {
     private javax.swing.JButton editAccountButton;
     private javax.swing.JButton findRideButton;
     private GUI.Info info1;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton letsRideButton;
     private GUI.Login login1;
     private javax.swing.JPanel loginButtons;
