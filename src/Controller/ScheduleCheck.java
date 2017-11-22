@@ -77,6 +77,8 @@ public class ScheduleCheck extends Query {
             
             while(rs.next()){
                 classID = rs.getInt(1);
+                System.out.print("Printing classID from checkClass: ");
+                System.out.println(classID);
             }
             
         } catch (SQLException e) {
@@ -137,10 +139,10 @@ public class ScheduleCheck extends Query {
         return profile;
     }
     
-    public ArrayList<Course> getSchedule (int profileID){
+    public ArrayList <Course> getSchedule (int profileID){
         ArrayList <Course> schedule = new ArrayList();
         
-        String sql = "SELECT student_id, class_id FROM student_classes " +
+        String sql = "SELECT class_id FROM student_classes " +
                 "WHERE student_id = ?";
         int class_id;
         ArrayList <Integer> classes = new ArrayList();
@@ -157,6 +159,8 @@ public class ScheduleCheck extends Query {
             //loop to get profileIDs
             while (rs.next()){
                 classes.add(rs.getInt(1));
+                System.out.print("printing class id from getSchedule: ");
+                System.out.println(rs.getInt(1));
             }
             
             

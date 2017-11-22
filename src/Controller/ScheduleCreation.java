@@ -51,7 +51,7 @@ public class ScheduleCreation extends Push {
     }
     
     public void addStudentCourse (int profile_id, int class_id){
-        String sql = "INSERT INTO student_classes (student_id, class_id) VALUES (?,?,?)";
+        String sql = "INSERT INTO student_classes (student_id, class_id) VALUES (?,?)";
 
             try (Connection conn = this.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -82,6 +82,9 @@ public class ScheduleCreation extends Push {
                 course.getCourseTime(),
                 course.getCourseDays()
         );
+        
+        app.addStudentCourse(3,2);
+        
         System.out.println(i);
     }
 }
