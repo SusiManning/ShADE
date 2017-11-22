@@ -29,8 +29,6 @@ public class Map extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/CampusMap.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
