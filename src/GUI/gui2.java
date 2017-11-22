@@ -6,6 +6,8 @@
 package GUI;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Font;
+import java.awt.Container;
 /**
  *
  * @author SusiManning
@@ -20,11 +22,29 @@ public class gui2 extends javax.swing.JFrame {
         
     }
     
+    private String newfont;
+    private int fontcount = 0;
+    
     public static  void changeColor (Component component, Color color){
         component.setBackground(color);
     }
     
+    private static void changeFont ( Component component, String font )
+    {
+        component.setFont ( new Font(font, component.getFont().getStyle(), 
+        component.getFont().getSize()) );
+        if ( component instanceof Container )
+            for ( Component child : ( ( Container )
+                    component ).getComponents () )
+                {
+                    changeFont ( child, font );
+                }
+    }
 
+                    
+        
+        
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,6 +71,7 @@ public class gui2 extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         matchButtons = new javax.swing.JPanel();
         editAccountButton = new javax.swing.JButton();
         matchRideButton = new javax.swing.JButton();
@@ -132,6 +153,13 @@ public class gui2 extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Change Font");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout loginButtonsLayout = new javax.swing.GroupLayout(loginButtons);
         loginButtons.setLayout(loginButtonsLayout);
         loginButtonsLayout.setHorizontalGroup(
@@ -153,22 +181,26 @@ public class gui2 extends javax.swing.JFrame {
                 .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         loginButtonsLayout.setVerticalGroup(
             loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(editAccount)
-                        .addComponent(letsRideButton)
-                        .addComponent(createAccount)
-                        .addComponent(jLabel1))
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addGroup(loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(editAccount)
+                            .addComponent(letsRideButton)
+                            .addComponent(createAccount)
+                            .addComponent(jLabel1))
+                        .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -197,7 +229,7 @@ public class gui2 extends javax.swing.JFrame {
             .addGroup(matchButtonsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(editAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 378, Short.MAX_VALUE)
                 .addComponent(matchRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -242,7 +274,7 @@ public class gui2 extends javax.swing.JFrame {
             accountButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(accountButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
+                .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addClassButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -279,7 +311,7 @@ public class gui2 extends javax.swing.JFrame {
             addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addClassesButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(addClassButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
+                .addComponent(addClassButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(findRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -457,6 +489,31 @@ public class gui2 extends javax.swing.JFrame {
         changeColor(addClasses1,new Color(0,240,0));
     }//GEN-LAST:event_jButton14ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        if(fontcount == 0)
+              newfont = "Times New Roman";
+        else if(fontcount == 1)
+              newfont = "Arial";
+        else if(fontcount == 2)
+              newfont = "Comic Sans MS";
+        else if(fontcount == 3){
+              newfont = "Tahoma";
+              fontcount = 0;
+        }        
+
+        changeFont(login1, newfont);
+        changeFont(info1, newfont);
+        changeFont(ride1, newfont);
+        changeFont(addClasses1, newfont);
+        changeFont(loginButtons, newfont);
+        changeFont(matchButtons, newfont);
+        changeFont(accountButtons, newfont);
+        changeFont(addClassesButtons, newfont);
+
+        fontcount += 1;
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -505,6 +562,7 @@ public class gui2 extends javax.swing.JFrame {
     private javax.swing.JButton editAccountButton;
     private javax.swing.JButton findRideButton;
     private GUI.Info info1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
