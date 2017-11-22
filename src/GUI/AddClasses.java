@@ -9,6 +9,7 @@ import Controller.ScheduleCheck;
 import Controller.ScheduleCreation;
 import Controller.Singleton;
 import DataModel.Course;
+import java.util.ArrayList;
 
 /**
  *
@@ -453,7 +454,34 @@ public class AddClasses extends javax.swing.JPanel {
     }//GEN-LAST:event_removeButtonHActionPerformed
 
     private void populateClassesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_populateClassesActionPerformed
-        // TODO add your handling code here:
+              ArrayList <Course> classArray = schedCheck.getSchedule(values.profid);
+        // Loop through elements.
+        //System.out.print(classArray);
+        for (Course c : classArray){
+            String place = c.getCourseLocation();
+            String time = c.getCourseTime();
+            String days = c.getCourseDays();
+            String total = place+" " + days + " " + time;
+            
+            if(classAOutput.getText().isEmpty()){
+                classAOutput.setText(total);
+            }else if(classBOutput.getText().isEmpty()){
+               classBOutput.setText(total); 
+            }else if(classCOutput.getText().isEmpty()){
+               classCOutput.setText(total); 
+            }else if(classDOutput.getText().isEmpty()){
+               classDOutput.setText(total); 
+            }else if(classEOutput.getText().isEmpty()){
+               classEOutput.setText(total); 
+            }else if(classFOutput.getText().isEmpty()){
+               classFOutput.setText(total); 
+            }else if(classGOutput.getText().isEmpty()){
+               classGOutput.setText(total); 
+            }else{
+               classHOutput.setText(total); 
+            }
+            
+        }
     }//GEN-LAST:event_populateClassesActionPerformed
 
 
