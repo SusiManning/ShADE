@@ -163,13 +163,12 @@ public class ScheduleCheck extends Query {
                 System.out.println(rs.getInt(1));
             }
             
-            
+            for (Integer courseid : classes ){
+            schedule.add(getCourse(courseid));
+            }
+                     
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        }
-        
-        for (Integer courseid : classes ){
-            schedule.add(getCourse(courseid));
         }
         
         return schedule;
