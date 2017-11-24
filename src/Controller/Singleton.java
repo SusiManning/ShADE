@@ -32,5 +32,5 @@ public class Singleton {
     * Profile and login id variables.
     */
    public int profid = -1;
-   public int logid = -1;
+   public int classid = -1;
 }
