@@ -13,7 +13,6 @@ import java.awt.Container;
  * @author SusiManning
  */
 public class gui2 extends javax.swing.JFrame {
-
     /**
      * Creates new form gui2
      */
@@ -74,13 +73,11 @@ public class gui2 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         matchButtons = new javax.swing.JPanel();
         editAccountButton = new javax.swing.JButton();
-        matchRideButton = new javax.swing.JButton();
         accountButtons = new javax.swing.JPanel();
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         addClassButton = new javax.swing.JButton();
         addClassesButtons = new javax.swing.JPanel();
-        addClassButton2 = new javax.swing.JButton();
         findRideButton = new javax.swing.JButton();
 
         jButton7.setText("jButton5");
@@ -93,7 +90,7 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.add(login1, "card6");
         parentPanel.add(info1, "card6");
         parentPanel.add(addClasses1, "card6");
-        parentPanel.add(ride1, "card2");
+        parentPanel.add(ride1, "card7");
 
         buttonPanel.setBackground(new java.awt.Color(0, 0, 0));
         buttonPanel.setLayout(new java.awt.CardLayout());
@@ -215,13 +212,6 @@ public class gui2 extends javax.swing.JFrame {
             }
         });
 
-        matchRideButton.setText("Find a Ride!");
-        matchRideButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                matchRideButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout matchButtonsLayout = new javax.swing.GroupLayout(matchButtons);
         matchButtons.setLayout(matchButtonsLayout);
         matchButtonsLayout.setHorizontalGroup(
@@ -229,17 +219,13 @@ public class gui2 extends javax.swing.JFrame {
             .addGroup(matchButtonsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(editAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 378, Short.MAX_VALUE)
-                .addComponent(matchRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(722, Short.MAX_VALUE))
         );
         matchButtonsLayout.setVerticalGroup(
             matchButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(matchButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(matchButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editAccountButton)
-                    .addComponent(matchRideButton))
+                .addComponent(editAccountButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -274,11 +260,11 @@ public class gui2 extends javax.swing.JFrame {
             accountButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(accountButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
+                .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 349, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(addClassButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addClassButton, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(saveButton, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
         accountButtonsLayout.setVerticalGroup(
@@ -296,8 +282,6 @@ public class gui2 extends javax.swing.JFrame {
 
         addClassesButtons.setBackground(new java.awt.Color(0, 0, 0));
 
-        addClassButton2.setText("Add Class");
-
         findRideButton.setText("Find a Ride!");
         findRideButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,9 +294,7 @@ public class gui2 extends javax.swing.JFrame {
         addClassesButtonsLayout.setHorizontalGroup(
             addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addClassesButtonsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(addClassButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(776, Short.MAX_VALUE)
                 .addComponent(findRideButton, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -320,10 +302,8 @@ public class gui2 extends javax.swing.JFrame {
             addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addClassesButtonsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(addClassesButtonsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addClassButton2)
-                    .addComponent(findRideButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(findRideButton)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         buttonPanel.add(addClassesButtons, "card6");
@@ -371,30 +351,6 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.revalidate(); 
     }//GEN-LAST:event_saveButtonActionPerformed
 
-    private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
-        parentPanel.removeAll();
-        parentPanel.add(addClasses1);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
-        
-        buttonPanel.removeAll();
-        buttonPanel.add(addClassesButtons);
-        buttonPanel.repaint();
-        buttonPanel.revalidate();
-    }//GEN-LAST:event_addClassButtonActionPerformed
-
-    private void findRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findRideButtonActionPerformed
-        parentPanel.removeAll();
-        parentPanel.add(ride1);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
-        
-        buttonPanel.removeAll();
-        buttonPanel.add(matchButtons);
-        buttonPanel.repaint();
-        buttonPanel.revalidate();
-    }//GEN-LAST:event_findRideButtonActionPerformed
-
     private void letsRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letsRideButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(ride1);
@@ -412,7 +368,6 @@ public class gui2 extends javax.swing.JFrame {
         parentPanel.add(info1);
         parentPanel.repaint();
         parentPanel.revalidate();
-                             
         
         buttonPanel.removeAll();
         buttonPanel.add(accountButtons);
@@ -444,18 +399,6 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.revalidate(); 
         
     }//GEN-LAST:event_editAccountButtonActionPerformed
-
-    private void matchRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matchRideButtonActionPerformed
-        parentPanel.removeAll();
-        parentPanel.add(ride1);
-        parentPanel.repaint();
-        parentPanel.revalidate(); 
-        
-        buttonPanel.removeAll();
-        buttonPanel.add(matchButtons);
-        buttonPanel.repaint();
-        buttonPanel.revalidate();
-    }//GEN-LAST:event_matchRideButtonActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -514,6 +457,30 @@ public class gui2 extends javax.swing.JFrame {
         fontcount += 1;
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(addClasses1);
+        parentPanel.repaint();
+        parentPanel.revalidate();
+
+        buttonPanel.removeAll();
+        buttonPanel.add(addClassesButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
+    }//GEN-LAST:event_addClassButtonActionPerformed
+
+    private void findRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findRideButtonActionPerformed
+        parentPanel.removeAll();
+        parentPanel.add(ride1);
+        parentPanel.repaint();
+        parentPanel.revalidate();
+
+        buttonPanel.removeAll();
+        buttonPanel.add(matchButtons);
+        buttonPanel.repaint();
+        buttonPanel.revalidate();
+    }//GEN-LAST:event_findRideButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -552,7 +519,6 @@ public class gui2 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel accountButtons;
     private javax.swing.JButton addClassButton;
-    private javax.swing.JButton addClassButton2;
     private GUI.AddClasses addClasses1;
     private javax.swing.JPanel addClassesButtons;
     private javax.swing.JPanel buttonPanel;
@@ -574,7 +540,6 @@ public class gui2 extends javax.swing.JFrame {
     private GUI.Login login1;
     private javax.swing.JPanel loginButtons;
     private javax.swing.JPanel matchButtons;
-    private javax.swing.JButton matchRideButton;
     private javax.swing.JPanel parentPanel;
     private GUI.Ride ride1;
     private javax.swing.JButton saveButton;

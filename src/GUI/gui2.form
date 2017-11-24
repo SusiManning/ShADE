@@ -78,7 +78,7 @@
         <Component class="GUI.Ride" name="ride1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card2"/>
+              <CardConstraints cardName="card7"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -259,9 +259,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="editAccountButton" min="-2" pref="317" max="-2" attributes="0"/>
-                      <EmptySpace pref="378" max="32767" attributes="0"/>
-                      <Component id="matchRideButton" min="-2" pref="338" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="722" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -269,10 +267,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="editAccountButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="matchRideButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="editAccountButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -285,14 +280,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editAccountButtonActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="matchRideButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Find a Ride!"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="matchRideButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -314,11 +301,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="cancelButton" pref="574" max="32767" attributes="0"/>
+                      <Component id="cancelButton" min="-2" pref="349" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="addClassButton" min="-2" pref="215" max="-2" attributes="0"/>
+                      <Component id="addClassButton" min="-2" pref="337" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="saveButton" min="-2" pref="232" max="-2" attributes="0"/>
+                      <Component id="saveButton" pref="335" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -380,9 +367,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="addClassButton2" pref="713" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="776" max="32767" attributes="0"/>
                       <Component id="findRideButton" min="-2" pref="314" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -392,21 +377,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="addClassButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="findRideButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="findRideButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="8" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="addClassButton2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Add Class"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="findRideButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Find a Ride!"/>
