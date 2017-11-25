@@ -12,7 +12,6 @@ import Controller.ProfileCreation;
 import Controller.ProfileEdit;
 import Controller.Singleton;
 import DataModel.Profile;
-import java.util.Set;
 
 /**
  *
@@ -174,7 +173,6 @@ public class Info extends javax.swing.JPanel {
             profileCreate.create(fname, lname, email, phone);
             int id = profileCheck.getID(email); //Find profile id
             values.profid = id;
-            values.logid = id;
             int end = email.indexOf("@"); //Take substring of email to get username
             login.create(email.substring(0, end) ,password, id); //Create login
         }

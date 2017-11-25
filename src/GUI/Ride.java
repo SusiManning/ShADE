@@ -7,15 +7,23 @@ package GUI;
 
 //import GUI.Info;
 
+import Controller.ScheduleCheck;
+import Controller.Singleton;
+import DataModel.Course;
+import java.util.ArrayList;
+import DataModel.Profile;
+import java.awt.Color;
+
+
 /**
  *
  * @author elizadellert
  */
 public class Ride extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Ride
-     */
+    ScheduleCheck schedCheck = new ScheduleCheck();
+    Singleton values = Singleton.getInstance();
+    
     public Ride() {
         initComponents();
     }
@@ -68,12 +76,8 @@ public class Ride extends javax.swing.JPanel {
         option4 = new javax.swing.JTextField();
         option2 = new javax.swing.JTextField();
         option3 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        optionChoice = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
+        populateButton = new javax.swing.JButton();
+        matchButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 255, 0));
 
@@ -111,138 +115,215 @@ public class Ride extends javax.swing.JPanel {
         });
 
         chooseFrom1.setText("O");
+        chooseFrom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom1ActionPerformed(evt);
+            }
+        });
 
         chooseTo1.setText("O");
+        chooseTo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo1ActionPerformed(evt);
+            }
+        });
 
         chooseFrom2.setText("O");
+        chooseFrom2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom2ActionPerformed(evt);
+            }
+        });
 
         chooseFrom3.setText("O");
+        chooseFrom3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom3ActionPerformed(evt);
+            }
+        });
 
         chooseFrom4.setText("O");
+        chooseFrom4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom4ActionPerformed(evt);
+            }
+        });
 
         chooseFrom5.setText("O");
+        chooseFrom5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom5ActionPerformed(evt);
+            }
+        });
 
         chooseFrom6.setText("O");
+        chooseFrom6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom6ActionPerformed(evt);
+            }
+        });
 
         chooseFrom7.setText("O");
+        chooseFrom7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom7ActionPerformed(evt);
+            }
+        });
 
         chooseFrom8.setText("O");
+        chooseFrom8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseFrom8ActionPerformed(evt);
+            }
+        });
 
         chooseTo2.setText("O");
+        chooseTo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo2ActionPerformed(evt);
+            }
+        });
 
         chooseTo3.setText("O");
+        chooseTo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo3ActionPerformed(evt);
+            }
+        });
 
         chooseTo4.setText("O");
+        chooseTo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo4ActionPerformed(evt);
+            }
+        });
 
         chooseTo7.setText("O");
+        chooseTo7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo7ActionPerformed(evt);
+            }
+        });
 
         chooseTo8.setText("O");
+        chooseTo8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo8ActionPerformed(evt);
+            }
+        });
 
         chooseTo5.setText("O");
+        chooseTo5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo5ActionPerformed(evt);
+            }
+        });
 
         chooseTo6.setText("O");
+        chooseTo6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseTo6ActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setText("1");
+        populateButton.setText("Populate");
+        populateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                populateButtonActionPerformed(evt);
+            }
+        });
 
-        jLabel5.setText("2");
-
-        jLabel6.setText("3");
-
-        jLabel7.setText("4");
-
-        optionChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
-
-        jLabel8.setText("Choose Your Ride");
+        matchButton.setText("Match");
+        matchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                matchButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(populateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGap(49, 49, 49)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(from2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(from1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel1))))
-                                .addComponent(from3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(from6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(from5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(from4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(chooseFrom1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(chooseFrom2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel1)
+                                    .addGap(71, 71, 71))
+                                .addComponent(from1)
+                                .addComponent(from2)
+                                .addComponent(from3)
+                                .addComponent(from5)
+                                .addComponent(from4)
+                                .addComponent(from6, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(chooseFrom6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(chooseFrom4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(chooseFrom3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(chooseFrom2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(chooseFrom1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(chooseFrom5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(from7, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                                .addComponent(from8))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(chooseFrom8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(chooseFrom7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(80, 80, 80)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(from8, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(chooseFrom8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(from7, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(chooseFrom6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(18, 47, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(to5, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(to6, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(to8, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(to1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(to2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(to3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(to7, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(to4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chooseTo1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(chooseTo3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel7)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2)
+                            .addComponent(to7, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(to6)
+                            .addComponent(to8)
+                            .addComponent(to5)
+                            .addComponent(to4)
+                            .addComponent(to3)
+                            .addComponent(to2)
+                            .addComponent(to1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel8))
-                            .addComponent(option4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(option1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(option2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(option3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(optionChoice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(43, 43, 43))
+                                    .addComponent(chooseTo1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chooseTo2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chooseTo7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chooseTo8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chooseTo6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chooseTo5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chooseTo3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel3)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 37, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(option1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addContainerGap(12, Short.MAX_VALUE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(option3, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(option4, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(option2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(chooseTo4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(matchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,14 +333,14 @@ public class Ride extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(jLabel1)
                     .addComponent(jLabel3))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(from1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(to1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(chooseFrom1)
-                            .addComponent(chooseTo1))
+                            .addComponent(chooseTo1)
+                            .addComponent(chooseFrom1))
                         .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(from2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,62 +354,59 @@ public class Ride extends javax.swing.JPanel {
                             .addComponent(to3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chooseTo3)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(option1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(option2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))))
+                        .addGap(29, 29, 29)
+                        .addComponent(option1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(option2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(option3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(option4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(optionChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
+                            .addComponent(to4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chooseTo4))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(to4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseTo5))
                                 .addGap(9, 9, 9)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(from5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom4)
                                     .addComponent(to5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseTo4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(from4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom6)
-                                    .addComponent(to6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseTo6))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(from7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseFrom7)
-                                    .addComponent(to7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(chooseTo7)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(from6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(chooseFrom5)))))
+                                    .addComponent(chooseTo5)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(option3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(chooseFrom6)
+                            .addComponent(to6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chooseTo6)
+                            .addComponent(from6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(from7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chooseFrom7)
+                            .addComponent(chooseTo7)
+                            .addComponent(to7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(option4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(chooseFrom4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(from4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(from5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chooseFrom5))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(from8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chooseFrom8)
                     .addComponent(to8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(chooseTo8))
-                .addGap(0, 69, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(populateButton)
+                    .addComponent(matchButton))
+                .addGap(0, 27, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -347,6 +425,230 @@ public class Ride extends javax.swing.JPanel {
     private void to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_to6ActionPerformed
+
+    private void populateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_populateButtonActionPerformed
+            ArrayList <Course> classArray = schedCheck.getSchedule(values.profid);
+        // Loop through elements.
+        //System.out.print(classArray);
+        for (Course c : classArray){
+            String place = c.getCourseLocation();
+            String time = c.getCourseTime();
+            String days = c.getCourseDays();
+            String total = place+ " " + time + " " + days;
+            
+            if(from1.getText().isEmpty()){
+                from1.setText(total);
+            }else if(from2.getText().isEmpty()){
+               from2.setText(total); 
+            }else if(from3.getText().isEmpty()){
+               from3.setText(total); 
+            }else if(from4.getText().isEmpty()){
+               from4.setText(total); 
+            }else if(from5.getText().isEmpty()){
+               from5.setText(total); 
+            }else if(from6.getText().isEmpty()){
+               from6.setText(total); 
+            }else if(from7.getText().isEmpty()){
+               from7.setText(total); 
+            }else{
+               from8.setText(total); 
+            }
+            
+            if(to1.getText().isEmpty()){
+                to1.setText(total);
+            }else if(to2.getText().isEmpty()){
+               to2.setText(total); 
+            }else if(to3.getText().isEmpty()){
+               to3.setText(total); 
+            }else if(to4.getText().isEmpty()){
+               to4.setText(total); 
+            }else if(to5.getText().isEmpty()){
+               to5.setText(total); 
+            }else if(to6.getText().isEmpty()){
+               to6.setText(total); 
+            }else if(to7.getText().isEmpty()){
+               to7.setText(total); 
+            }else{
+               to8.setText(total); 
+            }            
+            
+        }
+    }//GEN-LAST:event_populateButtonActionPerformed
+
+    private void chooseFrom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom1ActionPerformed
+        String selection = from1.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom1.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom1ActionPerformed
+
+    private void matchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matchButtonActionPerformed
+        int classID = values.classid;
+        int studentID = values.profid;
+                
+        ArrayList<Profile> matches = schedCheck.checkMatch(studentID, classID);
+        for (Profile m : matches){
+            String fname = m.getFirstName();
+            String lname = m.getLastName();
+            String phone = m.getPhoneNumber();
+            String total = fname+ " " + lname + " " + phone;
+            
+            if(option1.getText().isEmpty()){
+                option1.setText(total);
+            }else if(option2.getText().isEmpty()){
+               option2.setText(total); 
+            }else if(option3.getText().isEmpty()){
+               option3.setText(total); 
+            }else{
+               option4.setText(total); 
+            }
+        }
+    }//GEN-LAST:event_matchButtonActionPerformed
+
+    private void chooseFrom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom2ActionPerformed
+        String selection = from2.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom2.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom2ActionPerformed
+
+    private void chooseFrom3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom3ActionPerformed
+        String selection = from3.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom3.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom3ActionPerformed
+
+    private void chooseFrom5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom5ActionPerformed
+        String selection = from5.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom5.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom5ActionPerformed
+
+    private void chooseFrom4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom4ActionPerformed
+        String selection = from4.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom4.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom4ActionPerformed
+
+    private void chooseFrom6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom6ActionPerformed
+        String selection = from6.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom6.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom6ActionPerformed
+
+    private void chooseFrom7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom7ActionPerformed
+        String selection = from7.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom7.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom7ActionPerformed
+
+    private void chooseFrom8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom8ActionPerformed
+        String selection = from8.getText();
+        int end = selection.indexOf(" ");
+        String courseName = selection.substring(0,end);
+        String substr = selection.substring(end+1);
+        int end2 = substr.indexOf(" ");
+        String courseTime = selection.substring(end+1, end+end2+1);
+        String courseDays = selection.substring(end+end2+2);
+        
+        int courseID = schedCheck.checkClass(courseName, courseTime, courseDays);
+        values.classid = courseID;
+        
+        chooseFrom8.setBackground(Color.black);
+    }//GEN-LAST:event_chooseFrom8ActionPerformed
+
+    private void chooseTo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo1ActionPerformed
+        chooseTo1.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo1ActionPerformed
+
+    private void chooseTo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo2ActionPerformed
+        chooseTo2.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo2ActionPerformed
+
+    private void chooseTo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo3ActionPerformed
+        chooseTo3.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo3ActionPerformed
+
+    private void chooseTo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo5ActionPerformed
+        chooseTo5.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo5ActionPerformed
+
+    private void chooseTo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo4ActionPerformed
+        chooseTo4.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo4ActionPerformed
+
+    private void chooseTo6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo6ActionPerformed
+        chooseTo6.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo6ActionPerformed
+
+    private void chooseTo7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo7ActionPerformed
+        chooseTo7.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo7ActionPerformed
+
+    private void chooseTo8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo8ActionPerformed
+        chooseTo8.setBackground(Color.black);
+    }//GEN-LAST:event_chooseTo8ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -377,16 +679,12 @@ public class Ride extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton matchButton;
     private javax.swing.JTextField option1;
     private javax.swing.JTextField option2;
     private javax.swing.JTextField option3;
     private javax.swing.JTextField option4;
-    private javax.swing.JComboBox<String> optionChoice;
+    private javax.swing.JButton populateButton;
     private javax.swing.JTextField to1;
     private javax.swing.JTextField to2;
     private javax.swing.JTextField to3;

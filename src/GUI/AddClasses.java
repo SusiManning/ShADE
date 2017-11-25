@@ -456,7 +456,6 @@ public class AddClasses extends javax.swing.JPanel {
     private void populateClassesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_populateClassesActionPerformed
         ArrayList <Course> classArray = schedCheck.getSchedule(values.profid);
         // Loop through elements.
-        //System.out.print(classArray);
         for (Course c : classArray){
             String place = c.getCourseLocation();
             String time = c.getCourseTime();

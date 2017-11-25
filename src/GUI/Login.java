@@ -142,10 +142,8 @@ public class Login extends javax.swing.JPanel {
         String userText = usernameInput.getText();
         String passText = new String(passwordInput.getPassword());
         Singleton values = Singleton.getInstance();
-        values.logid = login.check(userText, passText);
         values.profid = login.check(userText, passText);
-        System.out.print(values.logid);
-        if (values.logid == -1)
+        if (values.profid == -1)
             loginMessageBox.setText("Account not found.\nTry Again or select 'Create Account'.");
         else
             loginMessageBox.setText("Account found!\nSelect 'Find a Ride' or 'Edit Account'.");

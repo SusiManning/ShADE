@@ -22,115 +22,110 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="populateButton" min="-2" pref="175" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="from1" alignment="1" max="32767" attributes="0"/>
+                              <Component id="from2" alignment="1" max="32767" attributes="0"/>
+                              <Component id="from3" max="32767" attributes="0"/>
+                              <Component id="from5" max="32767" attributes="0"/>
+                              <Component id="from4" max="32767" attributes="0"/>
+                              <Component id="from6" min="-2" pref="128" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="chooseFrom6" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="chooseFrom4" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="chooseFrom3" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="chooseFrom2" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="chooseFrom1" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="chooseFrom5" min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="from7" pref="128" max="32767" attributes="0"/>
+                              <Component id="from8" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="chooseFrom8" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="chooseFrom7" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="to7" pref="128" max="32767" attributes="0"/>
+                          <Component id="to6" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to8" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="to1" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="from2" min="-2" pref="105" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="chooseTo1" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="chooseTo2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="chooseTo7" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="chooseTo8" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="chooseTo6" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="chooseTo5" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="chooseTo3" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace type="separate" pref="37" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="from1" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="option1" min="-2" pref="206" max="-2" attributes="0"/>
+                                              <EmptySpace pref="12" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="option3" min="-2" pref="206" max="-2" attributes="0"/>
+                                                  <Component id="option4" min="-2" pref="206" max="-2" attributes="0"/>
+                                                  <Component id="option2" alignment="0" min="-2" pref="206" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Component id="from3" alignment="1" min="-2" pref="105" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="from6" alignment="1" min="-2" pref="107" max="-2" attributes="0"/>
-                          <Component id="from5" alignment="1" min="-2" pref="105" max="-2" attributes="0"/>
-                          <Component id="from4" alignment="1" min="-2" pref="105" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="chooseFrom1" min="-2" pref="45" max="-2" attributes="0"/>
-                          <Component id="chooseFrom2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="chooseTo4" min="-2" pref="45" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="from8" min="-2" pref="107" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="chooseFrom8" min="-2" pref="45" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="from7" min="-2" pref="107" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="chooseFrom6" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom7" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom4" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom5" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom3" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
+                      <Component id="matchButton" min="-2" pref="175" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace type="separate" pref="47" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="to5" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="to6" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="to8" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="to1" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <Component id="to2" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="to3" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="to7" min="-2" pref="105" max="-2" attributes="0"/>
-                  <Component id="to4" min="-2" pref="105" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="chooseTo1" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo2" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo7" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo8" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo6" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo4" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo5" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                  <Component id="chooseTo3" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="option4" min="-2" pref="137" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="option1" min="-2" pref="137" max="-2" attributes="0"/>
-                                  <Component id="option2" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="option3" min="-2" pref="137" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="optionChoice" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -143,14 +138,14 @@
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace type="separate" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="from1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="to1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="chooseFrom1" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="chooseTo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chooseFrom1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -168,68 +163,60 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="option1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="option2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="option1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="option2" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="option3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="to4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chooseTo4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="option4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel8" min="-2" pref="34" max="-2" attributes="0"/>
-                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Component id="optionChoice" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="to4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="chooseTo5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="from5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom4" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="to5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="chooseTo4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="from4" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="to6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="chooseTo6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="from7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="chooseFrom7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="to7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="chooseTo7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chooseTo5" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="from6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="chooseFrom5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="option3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="chooseFrom6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="to6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chooseTo6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="from6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="from7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chooseFrom7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chooseTo7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="to7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="option4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="chooseFrom4" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Component id="from4" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="from5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="chooseFrom5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -240,7 +227,12 @@
                   <Component id="to8" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="chooseTo8" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="69" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="populateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="matchButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -318,81 +310,129 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo1">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom2">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom3">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom4">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom5">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom6">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom7">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseFrom8">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseFrom8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo2">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo3">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo4">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo7">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo7ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo8">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo5">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="chooseTo6">
       <Properties>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chooseTo6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="option1">
     </Component>
@@ -402,45 +442,21 @@
     </Component>
     <Component class="javax.swing.JTextField" name="option3">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JButton" name="populateButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="text" type="java.lang.String" value="Populate"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="populateButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JButton" name="matchButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="Match"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="3"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="4"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="optionChoice">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="1"/>
-            <StringItem index="1" value="2"/>
-            <StringItem index="2" value="3"/>
-            <StringItem index="3" value="4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Choose Your Ride"/>
-      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="matchButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
