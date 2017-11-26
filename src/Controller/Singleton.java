@@ -11,6 +11,13 @@ package Controller;
  * @author SusiManning
  */
 public class Singleton {
+    
+     /**
+     * Method that follows Singleton design
+     * @param Singleton
+     * @param profid
+     * @param classid
+     */
 
    private static Singleton singleton = new Singleton( );
 
