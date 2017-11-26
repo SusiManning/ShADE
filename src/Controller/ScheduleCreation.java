@@ -15,6 +15,15 @@ import java.sql.SQLException;
  */
 
 public class ScheduleCreation extends Push {
+      
+      /**
+     * Method to create a schedule.
+     * @param location
+     * @param time
+     * @param days
+     * @param classcreated
+     */
+    
     private String location; 
     private String time; 
     private String days;
@@ -51,6 +60,14 @@ public class ScheduleCreation extends Push {
     }
     
     public void addStudentCourse (int profile_id, int class_id){
+        
+      /**
+     * Method to add a course.
+     * @param pstmt
+     * @param course
+     * @param test
+     */
+              
         String sql = "INSERT INTO student_classes (student_id, class_id) VALUES (?,?)";
 
             try (Connection conn = this.connect();
@@ -63,7 +80,6 @@ public class ScheduleCreation extends Push {
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
-    
     }
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
