@@ -13,6 +13,10 @@ import Controller.Singleton;
  * @author erd0008
  */
 public class Login extends javax.swing.JPanel {
+    
+     /**
+     * Method that sets up GUI for login in screen.
+     */
 
     /**
      * Creates new form Login2

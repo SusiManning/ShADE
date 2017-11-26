@@ -17,6 +17,14 @@ import java.util.ArrayList;
  */
 public class AddClasses extends javax.swing.JPanel {
     
+     /**
+     * Method to add a class.
+     * @param course
+     * @param sched
+     * @param schedCheck
+     * @param values
+     */
+    
     //Create instances of necessary classes
     Course course = new Course();
     ScheduleCreation sched = new ScheduleCreation();

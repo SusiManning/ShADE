@@ -18,6 +18,18 @@ import DataModel.Profile;
  * @author erd0008
  */
 public class Info extends javax.swing.JPanel {
+    
+    /**
+     * Method that sets class information.
+     * @param values
+     * @param profileCreate
+     * @param login
+     * @param profileCheck
+     * @param loginCheck
+     * @param profile
+     * @param edit
+     */
+    
     Singleton values = Singleton.getInstance();
     ProfileCreation profileCreate = new ProfileCreation();
     LoginCreation login = new LoginCreation();

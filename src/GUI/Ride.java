@@ -20,6 +20,10 @@ import java.awt.Color;
  * @author elizadellert
  */
 public class Ride extends javax.swing.JPanel {
+    
+     /**
+     * Method that creates the GUI for the reserve ride screen.
+     */
 
     ScheduleCheck schedCheck = new ScheduleCheck();
     Singleton values = Singleton.getInstance();
