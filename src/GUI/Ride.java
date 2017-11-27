@@ -16,7 +16,8 @@ import java.awt.Color;
 
 
 /**
- *
+ * JPanel to allow user to choose classes transporting between to find a 
+ * matching user from the database.
  * @author elizadellert
  */
 public class Ride extends javax.swing.JPanel {
@@ -435,23 +436,40 @@ public class Ride extends javax.swing.JPanel {
                 .addGap(0, 6, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void from4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_from4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_from4ActionPerformed
-
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void from7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_from7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_from7ActionPerformed
-
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void from8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_from8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_from8ActionPerformed
-
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void to6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_to6ActionPerformed
-
+    /**
+     * Uses ScheduleCheck to find the logged in user's schedule.
+     * Loops through courses returned in schedule array and prints
+     * each course name, time, and days to an output text box.
+     * @param evt 
+     */
     private void populateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_populateButtonActionPerformed
         
         ArrayList <Course> classArray = schedCheck.getSchedule(values.profid);
@@ -501,7 +519,11 @@ public class Ride extends javax.swing.JPanel {
             
         }
     }//GEN-LAST:event_populateButtonActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom1ActionPerformed
         String selection = from1.getText();
         int end = selection.indexOf(" ");
@@ -516,7 +538,13 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom1.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom1ActionPerformed
-
+    /**
+     * Uses saved class id and user id from the singleton to 
+     * pass to ScheduleCheck's checkMatch method. Returns an arraylist of matches.
+     * Parses profiles and outputs the match names and phone numbers
+     * to the user.
+     * @param evt 
+     */
     private void matchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_matchButtonActionPerformed
         int classID = values.classid;
         int studentID = values.profid;
@@ -539,7 +567,11 @@ public class Ride extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_matchButtonActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom2ActionPerformed
         String selection = from2.getText();
         int end = selection.indexOf(" ");
@@ -554,7 +586,11 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom2.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom2ActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom3ActionPerformed
         String selection = from3.getText();
         int end = selection.indexOf(" ");
@@ -569,7 +605,11 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom3.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom3ActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom5ActionPerformed
         String selection = from5.getText();
         int end = selection.indexOf(" ");
@@ -584,7 +624,11 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom5.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom5ActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom4ActionPerformed
         String selection = from4.getText();
         int end = selection.indexOf(" ");
@@ -599,7 +643,11 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom4.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom4ActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom6ActionPerformed
         String selection = from6.getText();
         int end = selection.indexOf(" ");
@@ -614,7 +662,11 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom6.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom6ActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom7ActionPerformed
         String selection = from7.getText();
         int end = selection.indexOf(" ");
@@ -629,7 +681,11 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom7.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom7ActionPerformed
-
+    /**
+     * Parses the text in chosen field and uses the selection pieces to find
+     * class id. Sets the class id in the Singleton.
+     * @param evt 
+     */
     private void chooseFrom8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseFrom8ActionPerformed
         String selection = from8.getText();
         int end = selection.indexOf(" ");
@@ -644,35 +700,59 @@ public class Ride extends javax.swing.JPanel {
         
         chooseFrom8.setBackground(Color.black);
     }//GEN-LAST:event_chooseFrom8ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo1ActionPerformed
         chooseTo1.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo1ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo2ActionPerformed
         chooseTo2.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo2ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo3ActionPerformed
         chooseTo3.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo3ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo5ActionPerformed
         chooseTo5.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo5ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo4ActionPerformed
         chooseTo4.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo4ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo6ActionPerformed
         chooseTo6.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo6ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo7ActionPerformed
         chooseTo7.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo7ActionPerformed
-
+    /**
+     * Sets button background to black when pressed.
+     * @param evt 
+     */
     private void chooseTo8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseTo8ActionPerformed
         chooseTo8.setBackground(Color.black);
     }//GEN-LAST:event_chooseTo8ActionPerformed
