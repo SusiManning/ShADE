@@ -78,7 +78,7 @@
         <Component class="GUI.Ride" name="ride1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
-              <CardConstraints cardName="card7"/>
+              <CardConstraints cardName="card6"/>
             </Constraint>
           </Constraints>
         </Component>

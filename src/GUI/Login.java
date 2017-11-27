@@ -23,7 +23,8 @@ public class Login extends javax.swing.JPanel {
      */
     public Login() {
         initComponents();
-        loginMessageBox.setText("               Welcome to ShADE!\n     Enter your username and password\n            or create a new account.\n    Your username is the part of your first\n         registered email before the @.");
+        info.setText("               Welcome to ShADE!\n     Enter your username and password\n            or create a new account.\n    Your username is the part of your first\n         registered email before the @.");
+        info.setEditable(false);
     }
 
     /**
@@ -40,7 +41,7 @@ public class Login extends javax.swing.JPanel {
         passwordInput = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        loginMessageBox = new javax.swing.JEditorPane();
+        info = new javax.swing.JEditorPane();
         picture = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(51, 255, 51));
@@ -76,7 +77,7 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
-        jScrollPane1.setViewportView(loginMessageBox);
+        jScrollPane1.setViewportView(info);
 
         picture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/Screen Shot 2017-11-01 at 11.27.25 PM.png"))); // NOI18N
         picture.setText("jLabel2");
@@ -148,17 +149,17 @@ public class Login extends javax.swing.JPanel {
         Singleton values = Singleton.getInstance();
         values.profid = login.check(userText, passText);
         if (values.profid == -1)
-            loginMessageBox.setText("Account not found.\nTry Again or select 'Create Account'.");
+            info.setText("Account not found.\nTry Again or select 'Create Account'.");
         else
-            loginMessageBox.setText("Account found!\nSelect 'Find a Ride' or 'Edit Account'.");
+            info.setText("Account found!\nSelect 'Find a Ride' or 'Edit Account'.");
     }//GEN-LAST:event_goButtonActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton goButton;
+    private javax.swing.JEditorPane info;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JEditorPane loginMessageBox;
     private javax.swing.JPasswordField passwordInput;
     private javax.swing.JLabel picture;
     private javax.swing.JTextField usernameInput;
