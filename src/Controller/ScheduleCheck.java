@@ -275,17 +275,20 @@ public class ScheduleCheck extends Query {
         
     }
     
+    
+    /*
     public static void main(String[] args) {
                
-      /**
+      
      * Method to get course.
      * @param i
-     */
+     
       
         ScheduleCheck app = new ScheduleCheck();
 
         int i = app.checkClass("SST", "1:00", "TTh");
         System.out.println(i);
     }
+*/
 }
 

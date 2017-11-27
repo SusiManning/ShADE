@@ -46,6 +46,7 @@ public class ProfileCreation extends Push {
         }
     }
     
+    /*
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
     public static void main(String[] args) {
@@ -54,4 +55,5 @@ public class ProfileCreation extends Push {
         app.create("Bob", "Bob", "Bob@bob.com", "1800Bob");
         System.out.println("Profile created.");
     }
+*/
 }

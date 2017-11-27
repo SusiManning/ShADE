@@ -43,6 +43,7 @@ public class LoginCreation extends Push {
         }
     }
     
+    /*
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
     public static void main(String[] args) {
@@ -50,4 +51,5 @@ public class LoginCreation extends Push {
         
         app.create("test", "test", 40);
     }
+*/
 }

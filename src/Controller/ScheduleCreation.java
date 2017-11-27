@@ -81,6 +81,10 @@ public class ScheduleCreation extends Push {
                 System.out.println(e.getMessage());
             }
     }
+    
+    
+    
+    /*
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
     public static void main(String[] args) {
@@ -103,4 +107,5 @@ public class ScheduleCreation extends Push {
         
         System.out.println(i);
     }
+*/
 }

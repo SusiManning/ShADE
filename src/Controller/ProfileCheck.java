@@ -104,10 +104,14 @@ public class ProfileCheck extends Query {
         }
         return profile_id;
     }
+    
+    
+    /*
     public static void main(String[] args) {
         ProfileCheck app = new ProfileCheck();
 
         int id = app.getID("jrm9999@fake.edu");
         System.out.print(id);
     }
+*/
 }

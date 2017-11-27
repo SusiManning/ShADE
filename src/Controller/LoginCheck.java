@@ -88,6 +88,7 @@ public class LoginCheck extends Query {
         return profileid;
         
     }
+    /*
     //testing purposes -> seeing if it works!
     //how it will be called in the GUI
     public static void main(String[] args) {
@@ -96,4 +97,5 @@ public class LoginCheck extends Query {
         int id = app.check("test", "test");
         System.out.print(id);
     }
+*/
 }
