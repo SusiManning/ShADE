@@ -9,8 +9,8 @@ import Controller.LoginCheck;
 import Controller.Singleton;
 
 /**
- *
- * @author erd0008
+ * JPanel to allow user to login to program/
+ * @author erd0008 and slm0041
  */
 public class Login extends javax.swing.JPanel {
     
@@ -126,21 +126,32 @@ public class Login extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void usernameInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameInputActionPerformed
   
     }//GEN-LAST:event_usernameInputActionPerformed
-
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void goButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goButtonMouseClicked
-        // TODO add your handling code here:
-        //NEED TO ADD IF STATMENT TO CHECK LOGIN
-        //this.setVisible(false);
-        //new Info().setVisible(true); 
-    }//GEN-LAST:event_goButtonMouseClicked
 
+    }//GEN-LAST:event_goButtonMouseClicked
+    /**
+     * Unused action.
+     * @param evt 
+     */
     private void passwordInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordInputActionPerformed
-
+    /**
+     * Once pressed, checks if the username and password entered match the database. 
+     * Calls LoginCheck. Outputs whether the login is found or not to the user.
+     * @param evt 
+     */
     private void goButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goButtonActionPerformed
         //Check if user's login is in database and output message
         LoginCheck login = new LoginCheck();
