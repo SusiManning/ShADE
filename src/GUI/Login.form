@@ -117,7 +117,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JEditorPane" name="loginMessageBox">
+        <Component class="javax.swing.JEditorPane" name="info">
         </Component>
       </SubComponents>
     </Container>
