@@ -1,13 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Map
+ * Programmers: Michael David
+ * Date Last Edited: 11/28/2017
+ * Description: Method that holds map image to display in GUI.
  */
 package GUI;
 
-     /**
-     * Method that holds map image to display in GUI.
-     */
 public class Map extends javax.swing.JFrame {
     
     /**
