@@ -7,6 +7,10 @@
 
 package DataModel;
 
+/**
+ * Method to hold course contents
+ * @author elizadellert
+ */
 public class Course {
     private int courseID;
     private String location, time, days;
@@ -19,10 +23,10 @@ public class Course {
     /**
      * Constructor for Course class. Allows users to pass in id, class name, 
      * class location, class start time, and class days.
-     * @param id
-     * @param place
-     * @param t
-     * @param d 
+     * @param id course ID integer
+     * @param place course location as a string
+     * @param t course time as a string
+     * @param d course day as a string 
      */
     public Course(int id, String place, String t, String d)
     {
@@ -36,10 +40,10 @@ public class Course {
      * Method to set course information to created course object. 
      * User passes in id, class name, class location, 
      * class start time, and class meeting days.
-     * @param id
-     * @param place
-     * @param t
-     * @param d 
+     * @param id course ID integer
+     * @param place course location as a string
+     * @param t course time as a string
+     * @param d course day as a string 
      */
     public void setCourse(int id, String place, String t, String d)
     {
@@ -52,7 +56,7 @@ public class Course {
     /**
      * Method to set an existing course object's id.
      * Pass in an integer.
-     * @param id 
+     * @param id course ID integer
      */
     public void setCourseID(int id)
     {
@@ -62,7 +66,7 @@ public class Course {
     /**
      * Method to set existing course object's location.
      * Pass in a string.
-     * @param place 
+     * @param place course location as a string
      */
     public void setCourseLocation(String place)
     {
@@ -72,7 +76,7 @@ public class Course {
     /**
      * Method to set existing course object's start time.
      * Pass in a string.
-     * @param t 
+     * @param t course time as a string
      */
     public void setCourseTime(String t)
     {
@@ -82,7 +86,7 @@ public class Course {
     /**
      * Method to set existing course object's meeting days.
      * Pass in a string.
-     * @param d 
+     * @param d course day as a string
      */
     public void setCourseDays(String d)
     {
