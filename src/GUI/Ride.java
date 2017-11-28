@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Ride
+ * Programmers: Eliza Dellert
+ * Date Last Edited: 11/28/2017
+ * Description: JPanel to allow user to choose classes transporting between to find a 
+ * matching user from the database.
  */
 package GUI;
 
@@ -14,12 +16,6 @@ import java.util.ArrayList;
 import DataModel.Profile;
 import java.awt.Color;
 
-
-/**
- * JPanel to allow user to choose classes transporting between to find a 
- * matching user from the database.
- * @author elizadellert
- */
 public class Ride extends javax.swing.JPanel {
 
     ScheduleCheck schedCheck = new ScheduleCheck();
