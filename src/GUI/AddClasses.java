@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: AddClasses
+ * Programmers: Susi Manning
+ * Date Last Edited: 11/28/2017
+ * Description: JPanel to allow user to add courses to a profile.
  */
 package GUI;
 
@@ -11,10 +12,6 @@ import Controller.Singleton;
 import DataModel.Course;
 import java.util.ArrayList;
 
-/**
- * JPanel to allow user to add courses to a profile. 
- * @author SusiManning
- */
 public class AddClasses extends javax.swing.JPanel {
     
     //Create instances of necessary classes
