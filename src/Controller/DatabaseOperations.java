@@ -1,16 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: DatabaseOperations
+ * Programmers: Cailin Simpson
+ * Date Last Edited: 11/28/2017
  */
 package Controller;
 
 import java.sql.Connection;
 
-/**
- *
- * @author crs0050
- */
 public interface DatabaseOperations {
     public Connection connect();
     
