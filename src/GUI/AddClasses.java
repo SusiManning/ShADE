@@ -12,18 +12,10 @@ import DataModel.Course;
 import java.util.ArrayList;
 
 /**
- * JPanel to allow user to add classes.
+ * JPanel to allow user to add courses to a profile. 
  * @author SusiManning
  */
 public class AddClasses extends javax.swing.JPanel {
-    
-     /**
-     * Method to add a class.
-     * @param course
-     * @param sched
-     * @param schedCheck
-     * @param values
-     */
     
     //Create instances of necessary classes
     Course course = new Course();
@@ -385,16 +377,26 @@ public class AddClasses extends javax.swing.JPanel {
                 .addGap(111, 111, 111))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Unused method.
+     * @param evt 
+     */
     private void startHourPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_startHourPopupMenuWillBecomeVisible
         // TODO add your handling code here:
     }//GEN-LAST:event_startHourPopupMenuWillBecomeVisible
-
+    /**
+     * Unused method.
+     * @param evt 
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         new Map().setVisible(true); //Displays Map.java on the screen so the user can see the map 
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    /**
+     * Button to save entered information from GUI into the user's profile and 
+     * into the classes data table.
+     * @param evt 
+     */
     private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
         //Set variables for inputs from GUI
         String b = null;
@@ -450,43 +452,74 @@ public class AddClasses extends javax.swing.JPanel {
         //Need to get user's id to call sched.addStudentCourse().
         sched.addStudentCourse(values.profid, class_id);
     }//GEN-LAST:event_addClassButtonActionPerformed
-
+    /**
+     * Unused method.
+     * @param evt 
+     */
     private void classGOutputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classGOutputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_classGOutputActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonAActionPerformed
         classAOutput.setText("");
     }//GEN-LAST:event_removeButtonAActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonBActionPerformed
         classBOutput.setText("");
     }//GEN-LAST:event_removeButtonBActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonCActionPerformed
         classCOutput.setText("");
     }//GEN-LAST:event_removeButtonCActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonDActionPerformed
         classDOutput.setText("");
     }//GEN-LAST:event_removeButtonDActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonEActionPerformed
         classEOutput.setText("");
     }//GEN-LAST:event_removeButtonEActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonFActionPerformed
         classFOutput.setText("");
     }//GEN-LAST:event_removeButtonFActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonGActionPerformed
         classGOutput.setText("");
     }//GEN-LAST:event_removeButtonGActionPerformed
-
+    /**
+     * Empty the field
+     * @param evt 
+     */
     private void removeButtonHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonHActionPerformed
         classHOutput.setText("");
     }//GEN-LAST:event_removeButtonHActionPerformed
-
+    /**
+     * Button to populate fields with the user's saved classes. Uses to singleton
+     * to get the schedule and classes of the user.
+     * @param evt 
+     */
     private void populateClassesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_populateClassesActionPerformed
         ArrayList <Course> classArray = schedCheck.getSchedule(values.profid);
         // Loop through elements.

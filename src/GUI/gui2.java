@@ -325,7 +325,10 @@ public class gui2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * Button to move to the login JPanel card and loginButtons JPanel.
+     * @param evt 
+     */
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(login1);
@@ -338,7 +341,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.revalidate(); 
      
     }//GEN-LAST:event_cancelButtonActionPerformed
-
+    /**
+     * Moves to the Ride JPanel and matchButtons JPanel.
+     * @param evt 
+     */
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(ride1);
@@ -350,7 +356,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.repaint();
         buttonPanel.revalidate(); 
     }//GEN-LAST:event_saveButtonActionPerformed
-
+   /**
+     * Moves to the Ride JPanel and matchButtons JPanel.
+     * @param evt 
+     */
     private void letsRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letsRideButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(ride1);
@@ -362,7 +371,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.repaint();
         buttonPanel.revalidate();
     }//GEN-LAST:event_letsRideButtonActionPerformed
-
+   /**
+     * Moves to the Info JPanel and accountButtons JPanel.
+     * @param evt 
+     */
     private void editAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountActionPerformed
         parentPanel.removeAll();
         parentPanel.add(info1);
@@ -374,7 +386,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.repaint();
         buttonPanel.revalidate(); 
     }//GEN-LAST:event_editAccountActionPerformed
-
+   /**
+     * Moves to the Info JPanel and accountButtons JPanel.
+     * @param evt 
+     */
     private void createAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountActionPerformed
         parentPanel.removeAll();
         parentPanel.add(info1);
@@ -386,7 +401,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.repaint();
         buttonPanel.revalidate();
     }//GEN-LAST:event_createAccountActionPerformed
-
+   /**
+     * Moves to the Info JPanel and accountButtons JPanel.
+     * @param evt 
+     */
     private void editAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(info1);
@@ -399,7 +417,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.revalidate(); 
         
     }//GEN-LAST:event_editAccountButtonActionPerformed
-
+/**
+ * Changes color of JPanels.
+ * @param evt 
+ */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         changeColor(info1,new Color(255,204,153));
@@ -407,7 +428,10 @@ public class gui2 extends javax.swing.JFrame {
         changeColor(login1,new Color(255,204,153));
         changeColor(addClasses1,new Color(255,204,153));
     }//GEN-LAST:event_jButton5ActionPerformed
-
+/**
+ * Changes color of JPanels.
+ * @param evt 
+ */
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
          changeColor(info1,new Color(102,0,102));
@@ -415,7 +439,10 @@ public class gui2 extends javax.swing.JFrame {
         changeColor(login1,new Color(102,0,102));
         changeColor(addClasses1,new Color(102,0,102));
     }//GEN-LAST:event_jButton12ActionPerformed
-
+/**
+ * Changes color of JPanels.
+ * @param evt 
+ */
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
          changeColor(info1,new Color(153,153,153));
@@ -423,7 +450,10 @@ public class gui2 extends javax.swing.JFrame {
         changeColor(login1,new Color(153,153,153));
         changeColor(addClasses1,new Color(153,153,153));
     }//GEN-LAST:event_jButton13ActionPerformed
-
+/**
+ * Changes color of JPanels.
+ * @param evt 
+ */
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
          changeColor(info1,new Color(0,240,0));
@@ -431,7 +461,10 @@ public class gui2 extends javax.swing.JFrame {
         changeColor(login1,new Color(0,240,0));
         changeColor(addClasses1,new Color(0,240,0));
     }//GEN-LAST:event_jButton14ActionPerformed
-
+/**
+ * Goes through all text and changes fonts.
+ * @param evt 
+ */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         if(fontcount == 0)
@@ -456,7 +489,10 @@ public class gui2 extends javax.swing.JFrame {
 
         fontcount += 1;
     }//GEN-LAST:event_jButton1ActionPerformed
-
+   /**
+     * Moves to the adClasses JPanel and addClassesButtons JPanel.
+     * @param evt 
+     */
     private void addClassButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClassButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(addClasses1);
@@ -468,7 +504,10 @@ public class gui2 extends javax.swing.JFrame {
         buttonPanel.repaint();
         buttonPanel.revalidate();
     }//GEN-LAST:event_addClassButtonActionPerformed
-
+   /**
+     * Moves to the Ride JPanel and matchButtons JPanel.
+     * @param evt 
+     */
     private void findRideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findRideButtonActionPerformed
         parentPanel.removeAll();
         parentPanel.add(ride1);

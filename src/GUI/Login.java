@@ -9,14 +9,10 @@ import Controller.LoginCheck;
 import Controller.Singleton;
 
 /**
- * JPanel to allow user to login to program/
+ * JPanel to allow user to login to program.
  * @author erd0008 and slm0041
  */
 public class Login extends javax.swing.JPanel {
-    
-     /**
-     * Method that sets up GUI for login in screen.
-     */
 
     /**
      * Creates new form Login2
