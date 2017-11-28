@@ -6,6 +6,7 @@
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/ScheduleCreation.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/GUI/Ride.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/ProfileCheck.java</file>
+            <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/DatabaseOperations.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/Query.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/ProfileEdit.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/GUI/Map.java</file>
@@ -19,6 +20,7 @@
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/GUI/AddClasses.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/ScheduleCheck.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/DataModel/Profile.java</file>
+            <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/Singleton.java</file>
             <file>file:/C:/Users/caili/Documents/UAH/FA17/ShadeProject/src/Controller/LoginCheck.java</file>
         </group>
     </open-files>
