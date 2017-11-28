@@ -1,17 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: gui2
+ * Programmers: Susi Manning, Aaron Wieter, Michael David
+ * Date Last Edited: 11/28/2017
+ * Description: Main class for GUI.
  */
 package GUI;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.Container;
-/**
- * Main class for GUI.
- * @author SusiManning
- */
+
 public class gui2 extends javax.swing.JFrame {
     /**
      * Creates new form gui2
