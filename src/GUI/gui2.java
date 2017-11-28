@@ -9,7 +9,7 @@ import java.awt.Component;
 import java.awt.Font;
 import java.awt.Container;
 /**
- *
+ * Main class for GUI.
  * @author SusiManning
  */
 public class gui2 extends javax.swing.JFrame {
