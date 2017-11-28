@@ -1,17 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Login
+ * Programmers: Eliza Dellert, Susi Manning
+ * Date Last Edited: 11/28/2017
+ * Description: JPanel to allow user to login to program.
  */
 package GUI;
 
 import Controller.LoginCheck;
 import Controller.Singleton;
 
-/**
- * JPanel to allow user to login to program.
- * @author erd0008 and slm0041
- */
 public class Login extends javax.swing.JPanel {
 
     /**
