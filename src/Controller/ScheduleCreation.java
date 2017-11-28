@@ -1,18 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: ScheduleCreation
+ * Programmers: Cailin Simpson
+ * Date Last Edited: 11/28/2017
+ * Description: Class to communicate between GUI and database to create a Schedule.
  */
 package Controller;
 import DataModel.Course;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-/**
- *Class to communicate between GUI and database to create a Schedule.
- * @author caili
- */
 
 public class ScheduleCreation extends Push {
       
