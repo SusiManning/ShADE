@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: ProfileCreation
+ * Programmers: Aaron Wieter, Cailin Simpson
+ * Date Last Edited: 11/28/2017
+ * Description: Class to communicate between GUI and database to create a profile account.
  */
 package Controller;
 
@@ -9,21 +10,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- * Class to communicate between GUI and database to create a login account. 
- * @author crs0050
- */
 public class ProfileCreation extends Push {
     
     /**
-     * Constructor for login creation class.
+     * Default constructor for profile creation class.
      */
     public ProfileCreation (){
     
     }
     
     /**
-     * Method to create a login account. Using sqlite syntx, name, email,
+     * Method to create a profile account. Using sqlite syntx, first_name, last_name, email,
      * and phonenum are passed in and set into the database table.
      * @param  first_name First name given by the user
      * @param  last_name Last name given by the user
