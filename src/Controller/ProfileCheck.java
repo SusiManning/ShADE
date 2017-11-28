@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: ProfileCheck
+ * Programmers: Cailin Simpson, Aaron Wieter
+ * Date Last Edited: 11/28/2017
+ * Description: Class to check profile information between GUI and database.
  */
 package Controller;
 
@@ -11,14 +12,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Class to check login information between GUI and database.
- * @author crs0050
- */
 public class ProfileCheck extends Query {
     
     /**
-     * Constructor for login class.
+     * Default constructor for profile class.
      */
     public ProfileCheck () {}
     
