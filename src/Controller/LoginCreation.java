@@ -25,9 +25,9 @@ public class LoginCreation extends Push {
     /**
      * Method to create a login account. Using sqlite syntx, username, password,
      * and profile id are passed in and set into the database table.
-     * @param usrname
-     * @param pass
-     * @param profileid 
+     * @param usrname Username given by the user
+     * @param pass Password given by the user 
+     * @param profileid an identification number for the users profile
      */
     public void create(String usrname, String pass, int profileid){
         String sql = "INSERT INTO login(username, password, profile_id) VALUES(?,?,?)";
