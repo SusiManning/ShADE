@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: ProfileEdit
+ * Programmers: Susi Manning
+ * Date Last Edited: 11/28/2017
+ * Description: Class to communicate between GUI and database to edit an existing account profile.
  */
 package Controller;
 
@@ -9,18 +10,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- * Class to communicate between GUI and database to edit an existing account account. 
- * @author slm0041
- */
 public class ProfileEdit extends Push {
     
     /**
-     * Constructor for profile edit class.
+     * Default constructor for profile edit class.
      */
-    public ProfileEdit (){
-    
-    }
+    public ProfileEdit (){}
     
     /**
      * Method to edit a user's account. Using sqlite syntx, student's id, along with an updated name, email,
