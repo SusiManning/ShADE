@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: ScheduleCheck
+ * Programmers: Cailin Simpson
+ * Date Last Edited: 11/28/2017
+ * Description: Class to check schedule information between GUI and database.
  */
 package Controller;
 import DataModel.Profile;
@@ -12,15 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-/**
- * Class to check schedule information between GUI and database.
- * @author caili
- */
-
 public class ScheduleCheck extends Query {
-    
-
-    
+        
     private String building; 
     private String time; 
     private String days;
