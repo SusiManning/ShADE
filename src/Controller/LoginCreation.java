@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: LoginCreation
+ * Programmers: Cailin Simpson
+ * Date Last Edited: 11/28/2017
+ * Description: Class to communicate between GUI and database to create a login account.
  */
 package Controller;
 
@@ -9,10 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- * Class to communicate between GUI and database to create a login account. 
- * @author crs0050
- */
 public class LoginCreation extends Push {
     
     /**
