@@ -1,18 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Push
+ * Programmers: Cailin Simpson
+ * Date Last Edited: 11/28/2017
+ * Description: Class to hold methods to communicate with the database. Abstract to work for
+ * all types of objects needed to push to database.
  */
 package Controller;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-/**
- * Class to hold methods to communicate with the database. Abstract to work for 
- * all types of objects needed to push to database. 
- * @author crs0050
- */
+
 public abstract class Push implements DatabaseOperations {
     
     //http://www.sqlitetutorial.net/sqlite-java/insert/
