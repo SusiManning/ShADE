@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- *
+ *Class to communicate between GUI and database to create a Schedule.
  * @author caili
  */
 

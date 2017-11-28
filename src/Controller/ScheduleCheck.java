@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
+ * Class to check schedule information between GUI and database.
  * @author caili
  */
 
