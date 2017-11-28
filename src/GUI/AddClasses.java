@@ -12,7 +12,7 @@ import DataModel.Course;
 import java.util.ArrayList;
 
 /**
- *
+ * JPanel to allow user to add classes.
  * @author SusiManning
  */
 public class AddClasses extends javax.swing.JPanel {
