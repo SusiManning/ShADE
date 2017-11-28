@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: LoginCheck
+ * Programmers: Cailin Simpson
+ * Date Last Edtied: 11/28/2017
+ * Description: Class to check login information between GUI and database.
  */
 package Controller;
 
@@ -9,12 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-/**
- * Class to check login information between GUI and database.
- * @author crs0050
- */
-
 
 public class LoginCheck extends Query {
     
