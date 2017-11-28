@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Info
+ * Programmers: Eliza Dellert, Susi Manning
+ * Date Last Edited: 11/28/2017
+ * Description: Method that sets class information
  */
 package GUI;
 
@@ -13,10 +14,6 @@ import Controller.ProfileEdit;
 import Controller.Singleton;
 import DataModel.Profile;
 
-/**
- * Method that sets class information.
- * @author erd0008 and slm0041
- */
 public class Info extends javax.swing.JPanel {
     
    
