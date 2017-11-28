@@ -14,12 +14,7 @@ import Controller.Singleton;
 import DataModel.Profile;
 
 /**
- *
- * @author erd0008
- */
-public class Info extends javax.swing.JPanel {
-    
-    /**
+
      * Method that sets class information.
      * @param values
      * @param profileCreate
@@ -28,7 +23,11 @@ public class Info extends javax.swing.JPanel {
      * @param loginCheck
      * @param profile
      * @param edit
-     */
+ * @author erd0008
+ */
+public class Info extends javax.swing.JPanel {
+    
+   
     
     Singleton values = Singleton.getInstance();
     ProfileCreation profileCreate = new ProfileCreation();
