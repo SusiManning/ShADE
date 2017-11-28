@@ -27,8 +27,8 @@ public class ProfileCheck extends Query {
      * a connection to the database is initialized, and a statement is prepared
      * to look for the profile id corresponding to the inputs. Loops through all
      * results to find corresponding id.
-     * @param profile_id
-     * @return
+     * @param profile_id The identification number of the student
+     * @return The profile of the user ID that is given
      */
     public Profile check(int profile_id){
         String sql = "SELECT first_name, last_name, email, phone FROM profiles " +
@@ -80,8 +80,8 @@ public class ProfileCheck extends Query {
     /**
      * Method to get the profile id of a user based on their input email, which 
      * should be unique.
-     * @param email
-     * @return 
+     * @param email email address of the user
+     * @return The user ID of the profile of the given email
      */
     public int getID(String email){
         String sql = "SELECT student_id FROM profiles " +

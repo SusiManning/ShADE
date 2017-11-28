@@ -10,23 +10,23 @@ package Controller;
  * panels of the GUI.
  * @author SusiManning
  */
+
 public class Singleton {
     
-     /**
-     * Method that follows Singleton design
-     * @param Singleton
-     * @param profid
-     * @param classid
-     */
 
    private static Singleton singleton = new Singleton( );
 
    /* A private Constructor prevents any other
     * class from instantiating.
     */
+ 
    private Singleton() { }
 
    /* Static 'instance' method */
+   /**
+    * Method to return singleton instances
+    * @return 
+    */
    public static Singleton getInstance( ) {
       return singleton;
    }

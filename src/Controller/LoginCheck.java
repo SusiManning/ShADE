@@ -14,11 +14,11 @@ import java.sql.SQLException;
  * Class to check login information between GUI and database.
  * @author crs0050
  */
+
+
 public class LoginCheck extends Query {
     
-    /**
-     * Constructor for login class.
-     */
+    
     public LoginCheck () {
     
     }
@@ -56,11 +56,24 @@ public class LoginCheck extends Query {
         return password;
     }
     
+    /**
+     * Function to validate the login credentials entered by the user
+     * @param username The username provided by the user
+     * @param password The password provided by the user
+     * @return true if login credentials are valid, false otherwise
+     */
+    
     public int check(String username, String password){
         int id = logincheck(username, password);
         return id;
     }
     
+    /**
+     * 
+     * @param username The username provided by the user
+     * @param password The password provided by the user
+     * @return returns a -1 if the login is not within the database
+     */
     private int logincheck(String username, String password){
         String sql = "SELECT profile_id FROM login " +
                 "WHERE username=? AND password=?";

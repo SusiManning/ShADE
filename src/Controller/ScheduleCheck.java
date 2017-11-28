@@ -13,22 +13,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
+ * Class to check schedule information between GUI and database.
  * @author caili
  */
+
 public class ScheduleCheck extends Query {
     
-    /**
-     * Method to check login accuracy.
-     * @param building
-     * @param time
-     * @param days
-     */
+
     
     private String building; 
     private String time; 
     private String days;
     
+
     public ScheduleCheck () {
     
     }
@@ -36,15 +33,15 @@ public class ScheduleCheck extends Query {
     //to be used by the ScheduleCreation
     //class and as need to see if a class is
     // in the database
+    /**
+     * Method to check class details
+     * @param building string to hold building location
+     * @param time string to hold class time
+     * @param days string to hold class days
+     * @return 
+     */
     public int checkClass(String building, String time, String days){
         
-     /**
-     * Method to check class details.
-     * @param building
-     * @param time
-     * @param days
-     * @return classID
-     */
         
         String sql = "SELECT class_id FROM classes " +
                 "WHERE building=? AND time=? AND days=?";
@@ -71,16 +68,14 @@ public class ScheduleCheck extends Query {
         return classID;
     }
     
+    /**
+     * Method to check course info
+     * @param course course object
+     * @return 
+     */
     public int checkClass(Course course){
         
-     /**
-     * Method to check class.
-     * @param building
-     * @param time
-     * @param days
-     * @param classID
-     * @return classID
-     */
+
         
         building = course.getCourseLocation();
         time = course.getCourseTime();
@@ -113,16 +108,14 @@ public class ScheduleCheck extends Query {
         return classID;
     }
     
+    /**
+     * Method to check and match the students
+     * @param profileID
+     * @param classID
+     * @return 
+     */
     public ArrayList<Profile> checkMatch(int profileID, int classID) {
       
-     /**
-     * Method to check class.
-     * @param profile
-     * @param profileID
-     * @param student_match
-     * @param classID
-     * @return profile
-     */
         
         Profile profile = null;
         
@@ -169,16 +162,13 @@ public class ScheduleCheck extends Query {
         return profiles;
     }
     
+    /**
+     * Method to get a user profile
+     * @param profileID integer that holds profile ID
+     * @return 
+     */
     private Profile getProfileFromClass(int profileID){
         
-     /**
-     * Method to get class.
-     * @param profile
-     * @param profileID
-     * @param student_match
-     * @param classID
-     * @return profile
-     */
         
         Profile profile = null;
         ProfileCheck check = new ProfileCheck();
@@ -186,15 +176,13 @@ public class ScheduleCheck extends Query {
         return profile;
     }
     
+    /**
+     * Method to get get user schedule 
+     * @param profileID
+     * @return 
+     */
     public ArrayList <Course> getSchedule (int profileID){
         
-     /**
-     * Method to get class.
-     * @param sql
-     * @param class_id
-     * @param profileID
-     * @return schedule
-     */
         
         ArrayList <Course> schedule = new ArrayList();
         
@@ -230,16 +218,13 @@ public class ScheduleCheck extends Query {
         return schedule;
     }
     
+    /**
+     * Method to get user course object
+     * @param course_id integer that holds course object identifier
+     * @return 
+     */
     private Course getCourse(int course_id) {
         
-      /**
-     * Method to get course.
-     * @param building
-     * @param time
-     * @param days
-     * @param conn
-     * @return course
-     */
         
         Course course = new Course();
         

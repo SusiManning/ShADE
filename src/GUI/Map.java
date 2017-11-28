@@ -5,15 +5,10 @@
  */
 package GUI;
 
-/**
- *
- * @author Michael
- */
-public class Map extends javax.swing.JFrame {
-
      /**
      * Method that holds map image to display in GUI.
      */
+public class Map extends javax.swing.JFrame {
     
     /**
      * Creates new form Map

@@ -14,16 +14,8 @@ import Controller.Singleton;
 import DataModel.Profile;
 
 /**
-
-     * Method that sets class information.
-     * @param values
-     * @param profileCreate
-     * @param login
-     * @param profileCheck
-     * @param loginCheck
-     * @param profile
-     * @param edit
- * @author erd0008
+ * Method that sets class information.
+ * @author erd0008 and slm0041
  */
 public class Info extends javax.swing.JPanel {
     
@@ -185,7 +177,11 @@ public class Info extends javax.swing.JPanel {
                 .addContainerGap(105, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Button to save information entered into the GUI to either a new profile or 
+ * editing a current account.
+ * @param evt 
+ */
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // Save inputs to profile
           
@@ -206,7 +202,10 @@ public class Info extends javax.swing.JPanel {
               edit.edit(values.profid, fname, lname, email, phone);
         }
     }//GEN-LAST:event_saveButtonActionPerformed
-
+    /**
+     * Button to populate field with account's profile information.
+     * @param evt 
+     */
     private void editAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountActionPerformed
         //Check inputs
 //        String fname = firstNameInput.getText();

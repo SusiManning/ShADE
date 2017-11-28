@@ -64,15 +64,15 @@ public class Profile {                               //Holds the user's schedule
     /**
      * Method to set schedule stored in a given profile.
      * Pass in a schedule object.
-     * @param newSchedule 
+     * @param newSchedule course time as a string
      */
 
-    
     /**
      * Method to set firstname stored in a given profile.
      * Pass in a string.
-     * @param newName 
+     * @param newName user first name as a string
      */
+
     public void setFirstName(String newName){
         firstname = newName;
     }
@@ -80,7 +80,7 @@ public class Profile {                               //Holds the user's schedule
     /**
      * Method to set lastname stored in a given profile.
      * Pass in a string.
-     * @param newName 
+     * @param newName user last name as a string
      */
     public void setLastName(String newName){
         lastname = newName;
@@ -89,7 +89,7 @@ public class Profile {                               //Holds the user's schedule
     /**
      * Method to set email in a given profile.
      * Pass in a string.
-     * @param newEmail 
+     * @param newEmail user email as a string
      */
     public void setEmail(String newEmail){
         email = newEmail;
@@ -98,7 +98,7 @@ public class Profile {                               //Holds the user's schedule
     /**
      * Method to set phone number in a given profile.
      * Pass in a string.
-     * @param newPhoneNum 
+     * @param newPhoneNum user phone number as a string
      */
     public void setPN(String newPhoneNum){
         phonenum = newPhoneNum;
@@ -107,7 +107,7 @@ public class Profile {                               //Holds the user's schedule
     /**
      *Method to set profile_id in a given profile.
      *Pass in an int.
-     *@param id
+     *@param id user profile id as an integer
      */
     public void setID(int id){
         profile_id = id;

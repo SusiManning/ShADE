@@ -25,10 +25,10 @@ public class ProfileCreation extends Push {
     /**
      * Method to create a login account. Using sqlite syntx, name, email,
      * and phonenum are passed in and set into the database table.
-     * @param  first_name
-     * @param  last_name
-     * @param  email
-     * @param  phone
+     * @param  first_name First name given by the user
+     * @param  last_name Last name given by the user
+     * @param  email Email provided by the user
+     * @param  phone Phone number provided by the user 
      */
     public void create(String first_name, String last_name, String email, String phone){
         String sql = "INSERT INTO profiles (first_name, last_name, email, phone) VALUES (?,?,?,?)";

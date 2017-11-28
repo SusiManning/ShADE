@@ -10,24 +10,22 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- *
+ *Class to communicate between GUI and database to create a Schedule.
  * @author caili
  */
 
 public class ScheduleCreation extends Push {
       
-      /**
-     * Method to create a schedule.
-     * @param location
-     * @param time
-     * @param days
-     * @param classcreated
-     */
     
     private String location; 
     private String time; 
     private String days;
     private ScheduleCheck check = new ScheduleCheck();
+    
+    /**
+     * Method to add a course
+     * @param course 
+     */
     
     public void addCourse (Course course){
         location = course.getCourseLocation();
@@ -59,15 +57,14 @@ public class ScheduleCreation extends Push {
         }
     }
     
+    /**
+     * Method to add a student to a course
+     * @param profile_id
+     * @param class_id 
+     */
     public void addStudentCourse (int profile_id, int class_id){
         
-      /**
-     * Method to add a course.
-     * @param pstmt
-     * @param course
-     * @param test
-     */
-              
+      
         String sql = "INSERT INTO student_classes (student_id, class_id) VALUES (?,?)";
 
             try (Connection conn = this.connect();
