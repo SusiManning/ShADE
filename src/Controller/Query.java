@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Controller
+ * Programmers: Cailin Simpson
+ * Date Last Edited: 11/28/2017
+ * Description: Class to hold methods necessary to retrieve information from the database.
  */
 package Controller;
 
@@ -10,10 +11,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Class to hold methods necessary to retrieve information from the database.
- * @author crs0050
- */
 public abstract class Query implements DatabaseOperations {
     
     //http://www.sqlitetutorial.net/sqlite-java/select/
