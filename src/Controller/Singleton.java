@@ -1,15 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Program Name: Singleton
+ * Programmers: Susi Manning
+ * Date Last Edited: 11/28/2017
+ * Description: Class to hold user login and profile ids to be accessed from all
+ * panels of the GUI.
  */
 package Controller;
-
-/**
- * Class to hold user login and profile ids to be accessed from all 
- * panels of the GUI.
- * @author SusiManning
- */
 
 public class Singleton {
     
